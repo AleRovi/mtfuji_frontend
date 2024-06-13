@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-menu-card',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './menu-card.component.html',
   styleUrl: './menu-card.component.css'
 })
-export class MenuCardComponent {
+export class MenuCardComponent implements OnInit{
+  
   menu = {
-        "snacks": [
+        "snacks" :  [
             {
                 "id": 5,
                 "name": "Pop-Corn",
@@ -18,17 +20,19 @@ export class MenuCardComponent {
                 "complimentary": true,
                 "description": "NaCl, mais",
                 "vegan": true,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Pop-Corn.png"
             },
             {
                 "id": 7,
-                "name": "Chipster",
+                "name": "Cipster",
                 "cost": 2.5,
                 "typeOfFood": "SNACKS",
                 "complimentary": false,
                 "description": "NaCl, patata",
                 "vegan": true,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Cipster.png"
             },
             {
                 "id": 8,
@@ -38,7 +42,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "NaCl, mais",
                 "vegan": true,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Nachos.png"
             }
         ],
         "sandwiches": [
@@ -50,7 +55,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Hamburger di bovino , lattuga, jalapenos, peperoni, salsa burger",
                 "vegan": false,
-                "glutenFree": false
+                "glutenFree": false,
+                "imagePath": "images/menu/Kamikaze Burger.png"
             },
             {
                 "id": 14,
@@ -60,7 +66,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Funghi, Speack, Salsiccia, cheddar",
                 "vegan": false,
-                "glutenFree": false
+                "glutenFree": false,
+                "imagePath": "images/menu/Panino Fuji.png"
             },
             {
                 "id": 15,
@@ -70,7 +77,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Hamburger vegetariano, melanzane grigliate, salsa di pomodoro, cipolla caramellate, lattuga",
                 "vegan": true,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Hamburger Vegetarian.png"
             },
             {
                 "id": 16,
@@ -80,7 +88,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "salsa yogurt, pomodoro, carciofi, tofu, zucchine",
                 "vegan": true,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Focaccia Origami.png"
             },
             {
                 "id": 17,
@@ -90,7 +99,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "pomodoro, insalata, prosciutto, maionese",
                 "vegan": false,
-                "glutenFree": false
+                "glutenFree": false,
+                "imagePath": "images/menu/Sandwich.png"
             }
         ],
         "salads": [
@@ -102,7 +112,9 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Pomodori, Lattuga, Mais, Tofu",
                 "vegan": true,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Insalata Samurai.png"
+                
             },
             {
                 "id": 10,
@@ -112,7 +124,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Peperoni verdi, Lattuga, Crostini, Cetrioli",
                 "vegan": true,
-                "glutenFree": false
+                "glutenFree": false,
+                "imagePath": "images/menu/Insalata Yoshi.png"
             },
             {
                 "id": 11,
@@ -122,7 +135,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Polpo, Gamberetti, Pomodorini, aceto , olio",
                 "vegan": false,
-                "glutenFree": false
+                "glutenFree": false,
+                "imagePath": "images/menu/Insalata Tsunami.png"
             },
             {
                 "id": 12,
@@ -132,7 +146,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Pollo, lattuga, aceto balsamico, sale, pepe",
                 "vegan": false,
-                "glutenFree": false
+                "glutenFree": false,
+                "imagePath": "images/menu/Chicken Salad.png"
             }
         ],
         "desserts": [
@@ -144,7 +159,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Caffe, panna, savoiardi, cacao",
                 "vegan": false,
-                "glutenFree": false
+                "glutenFree": false,
+                "imagePath": "images/menu/Tiramisù.png"
             },
             {
                 "id": 19,
@@ -154,7 +170,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "nutella, latte, farina 00",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/crepés.png"
             },
             {
                 "id": 20,
@@ -164,7 +181,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "nutella, latte, farina 00, miele, uova, lievito",
                 "vegan": false,
-                "glutenFree": false
+                "glutenFree": false,
+                "imagePath": "images/menu/Doroyaki.png"
             },
             {
                 "id": 21,
@@ -174,7 +192,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "biscotti, panna, mascarpone, frutta",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Cheesecake.png"
             }
         ],
         "friedFoods": [
@@ -186,7 +205,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "polllo x6",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Nuggets.png"
             },
             {
                 "id": 23,
@@ -196,7 +216,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "patate, NaCl",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Patatine fritte small.png"
             },
             {
                 "id": 24,
@@ -206,7 +227,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "cipolla x6, NaCl ",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Anelli di cipolla.png"
             },
             {
                 "id": 25,
@@ -216,7 +238,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "patate, NaCl",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Patatine fritte max.png"
             },
             {
                 "id": 26,
@@ -226,7 +249,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "alette di pollo x6, NaCl",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Fuji wings.png"
             }
         ],
         "specialFoods": [
@@ -238,7 +262,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "gamberetti con salsa rosa x8",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Gamberetti cocktail.png"
             },
             {
                 "id": 27,
@@ -248,7 +273,8 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Tagliere di affettati e prosciutti misti",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Manaita classic.png"
             },
             {
                 "id": 28,
@@ -258,8 +284,12 @@ export class MenuCardComponent {
                 "complimentary": false,
                 "description": "Tagliere di fritti misti",
                 "vegan": false,
-                "glutenFree": true
+                "glutenFree": true,
+                "imagePath": "images/menu/Manaita fritti.png"
             }
         ]
+    }
+    ngOnInit(): void {
+        return;
     }
 }
