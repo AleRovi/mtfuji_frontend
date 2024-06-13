@@ -1,0 +1,265 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-menu-card',
+  standalone: true,
+  imports: [],
+  templateUrl: './menu-card.component.html',
+  styleUrl: './menu-card.component.css'
+})
+export class MenuCardComponent {
+  menu = {
+        "snacks": [
+            {
+                "id": 5,
+                "name": "Pop-Corn",
+                "cost": 2.5,
+                "typeOfFood": "SNACKS",
+                "complimentary": true,
+                "description": "NaCl, mais",
+                "vegan": true,
+                "glutenFree": true
+            },
+            {
+                "id": 7,
+                "name": "Chipster",
+                "cost": 2.5,
+                "typeOfFood": "SNACKS",
+                "complimentary": false,
+                "description": "NaCl, patata",
+                "vegan": true,
+                "glutenFree": true
+            },
+            {
+                "id": 8,
+                "name": "Nachos",
+                "cost": 2.5,
+                "typeOfFood": "SNACKS",
+                "complimentary": false,
+                "description": "NaCl, mais",
+                "vegan": true,
+                "glutenFree": true
+            }
+        ],
+        "sandwiches": [
+            {
+                "id": 13,
+                "name": "Kamikaze Burger",
+                "cost": 4.5,
+                "typeOfFood": "SANDWICHES",
+                "complimentary": false,
+                "description": "Hamburger di bovino , lattuga, jalapenos, peperoni, salsa burger",
+                "vegan": false,
+                "glutenFree": false
+            },
+            {
+                "id": 14,
+                "name": "Panino Fuji",
+                "cost": 4.5,
+                "typeOfFood": "SANDWICHES",
+                "complimentary": false,
+                "description": "Funghi, Speack, Salsiccia, cheddar",
+                "vegan": false,
+                "glutenFree": false
+            },
+            {
+                "id": 15,
+                "name": "Hamburger Vegetarian",
+                "cost": 5.0,
+                "typeOfFood": "SANDWICHES",
+                "complimentary": false,
+                "description": "Hamburger vegetariano, melanzane grigliate, salsa di pomodoro, cipolla caramellate, lattuga",
+                "vegan": true,
+                "glutenFree": true
+            },
+            {
+                "id": 16,
+                "name": "Focaccia Origami",
+                "cost": 5.0,
+                "typeOfFood": "SANDWICHES",
+                "complimentary": false,
+                "description": "salsa yogurt, pomodoro, carciofi, tofu, zucchine",
+                "vegan": true,
+                "glutenFree": true
+            },
+            {
+                "id": 17,
+                "name": "Sandwich",
+                "cost": 3.0,
+                "typeOfFood": "SANDWICHES",
+                "complimentary": false,
+                "description": "pomodoro, insalata, prosciutto, maionese",
+                "vegan": false,
+                "glutenFree": false
+            }
+        ],
+        "salads": [
+            {
+                "id": 9,
+                "name": "Insalata Samurai",
+                "cost": 4.0,
+                "typeOfFood": "SALADS",
+                "complimentary": false,
+                "description": "Pomodori, Lattuga, Mais, Tofu",
+                "vegan": true,
+                "glutenFree": true
+            },
+            {
+                "id": 10,
+                "name": "Insalata Yoshi",
+                "cost": 4.0,
+                "typeOfFood": "SALADS",
+                "complimentary": false,
+                "description": "Peperoni verdi, Lattuga, Crostini, Cetrioli",
+                "vegan": true,
+                "glutenFree": false
+            },
+            {
+                "id": 11,
+                "name": "Insalata Tsunami",
+                "cost": 8.0,
+                "typeOfFood": "SALADS",
+                "complimentary": false,
+                "description": "Polpo, Gamberetti, Pomodorini, aceto , olio",
+                "vegan": false,
+                "glutenFree": false
+            },
+            {
+                "id": 12,
+                "name": "Chicken Salad",
+                "cost": 7.0,
+                "typeOfFood": "SALADS",
+                "complimentary": false,
+                "description": "Pollo, lattuga, aceto balsamico, sale, pepe",
+                "vegan": false,
+                "glutenFree": false
+            }
+        ],
+        "desserts": [
+            {
+                "id": 18,
+                "name": "Tiramisù",
+                "cost": 4.0,
+                "typeOfFood": "DESSERTS",
+                "complimentary": false,
+                "description": "Caffe, panna, savoiardi, cacao",
+                "vegan": false,
+                "glutenFree": false
+            },
+            {
+                "id": 19,
+                "name": "crepés",
+                "cost": 4.0,
+                "typeOfFood": "DESSERTS",
+                "complimentary": false,
+                "description": "nutella, latte, farina 00",
+                "vegan": false,
+                "glutenFree": true
+            },
+            {
+                "id": 20,
+                "name": "Doroyaki",
+                "cost": 4.0,
+                "typeOfFood": "DESSERTS",
+                "complimentary": false,
+                "description": "nutella, latte, farina 00, miele, uova, lievito",
+                "vegan": false,
+                "glutenFree": false
+            },
+            {
+                "id": 21,
+                "name": "Cheesecake",
+                "cost": 4.0,
+                "typeOfFood": "DESSERTS",
+                "complimentary": false,
+                "description": "biscotti, panna, mascarpone, frutta",
+                "vegan": false,
+                "glutenFree": true
+            }
+        ],
+        "friedFoods": [
+            {
+                "id": 22,
+                "name": "Nuggets",
+                "cost": 3.5,
+                "typeOfFood": "FRIED_FOODS",
+                "complimentary": false,
+                "description": "polllo x6",
+                "vegan": false,
+                "glutenFree": true
+            },
+            {
+                "id": 23,
+                "name": "Patatine fritte small",
+                "cost": 2.5,
+                "typeOfFood": "FRIED_FOODS",
+                "complimentary": false,
+                "description": "patate, NaCl",
+                "vegan": false,
+                "glutenFree": true
+            },
+            {
+                "id": 24,
+                "name": "Anelli di cipolla",
+                "cost": 3.5,
+                "typeOfFood": "FRIED_FOODS",
+                "complimentary": false,
+                "description": "cipolla x6, NaCl ",
+                "vegan": false,
+                "glutenFree": true
+            },
+            {
+                "id": 25,
+                "name": "Patatine fritte max",
+                "cost": 6.0,
+                "typeOfFood": "FRIED_FOODS",
+                "complimentary": false,
+                "description": "patate, NaCl",
+                "vegan": false,
+                "glutenFree": true
+            },
+            {
+                "id": 26,
+                "name": "Fuji wings",
+                "cost": 3.5,
+                "typeOfFood": "FRIED_FOODS",
+                "complimentary": false,
+                "description": "alette di pollo x6, NaCl",
+                "vegan": false,
+                "glutenFree": true
+            }
+        ],
+        "specialFoods": [
+            {
+                "id": 6,
+                "name": "Gamberetti cocktail",
+                "cost": 6.0,
+                "typeOfFood": "SPECIAL_FOODS",
+                "complimentary": false,
+                "description": "gamberetti con salsa rosa x8",
+                "vegan": false,
+                "glutenFree": true
+            },
+            {
+                "id": 27,
+                "name": "Manaita classic",
+                "cost": 5.0,
+                "typeOfFood": "SPECIAL_FOODS",
+                "complimentary": false,
+                "description": "Tagliere di affettati e prosciutti misti",
+                "vegan": false,
+                "glutenFree": true
+            },
+            {
+                "id": 28,
+                "name": "Manaita fritti",
+                "cost": 5.0,
+                "typeOfFood": "SPECIAL_FOODS",
+                "complimentary": false,
+                "description": "Tagliere di fritti misti",
+                "vegan": false,
+                "glutenFree": true
+            }
+        ]
+    }
+}
