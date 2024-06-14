@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MenuCardComponent } from '../menu-card/menu-card.component';
 import { Menu } from '../model/menu';
 import { GeneralMenu } from '../model/generalMenu';
@@ -21,6 +21,10 @@ export class MenuComponent implements OnInit{
       next: gm => this.generalMenu = gm,
       error: err => console.log(err)
     });
+  }
+
+  trackByFn (index: number, item: any): any{
+    return item.id;
   }
 
 }

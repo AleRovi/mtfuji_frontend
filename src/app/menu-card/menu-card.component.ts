@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { GeneralMenu } from '../model/generalMenu';
 import { Menu } from '../model/menu';
@@ -12,11 +12,11 @@ import { Menu } from '../model/menu';
 })
 export class MenuCardComponent implements OnInit{
   basePath = "images/food/";
+  @Input() menu : Menu | null = null;
 
   getImagePath(imageName: string) : string{
     return this.basePath + imageName;
   }
-  menu : Menu | null = null;
 
 //   menu = {
 //         "snacks" :  [
