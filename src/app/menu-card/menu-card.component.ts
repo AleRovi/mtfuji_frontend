@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-menu-card',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './menu-card.component.html',
-  styleUrl: './menu-card.component.css'
+    selector: 'app-menu-card',
+    standalone: true,
+    imports: [RouterModule],
+    templateUrl: './menu-card.component.html',
+    styleUrl: './menu-card.component.css'
 })
-export class MenuCardComponent implements OnInit{
-  
-  menu = {
-        "snacks" :  [
+export class MenuCardComponent implements OnInit {
+
+    menu = {
+        "snacks": [
             {
                 "id": 5,
                 "name": "Pop-Corn",
@@ -114,7 +114,7 @@ export class MenuCardComponent implements OnInit{
                 "vegan": true,
                 "glutenFree": true,
                 "imagePath": "images/menu/Insalata Samurai.png"
-                
+
             },
             {
                 "id": 10,

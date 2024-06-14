@@ -1,65 +1,71 @@
 /* Stile per l'elemento ul */
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 10px;
-    background: #fff5e6;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Stile per l'elemento li */
-  li {
-    padding: 15px 20px;
-    border-bottom: 1px solid #ffa726;
-    transition: background 0.3s ease;
-    background: #ffe0b2;
-    border-radius: 8px;
-    margin: 10px 0;
-    display: flex; /* Utilizzo di flexbox per allineare contenuti */
-    align-items: center; /* Allinea verticalmente */
-  }
-  
-  li:last-child {
-    border-bottom: none;
-  }
-  
-  h3 {
-    font-weight: bold;
-    margin: 500px 0;
-    color: #ef6c00;
-    font-size: 1.2em;
-  }
-  
-  li:hover {
-    background: #ffcc80;
-  }
-  
-  li a {
-    text-decoration: none;
-    color: #e65100;
-    transition: color 0.3s ease;
-  }
-  
-  li a:hover {
-    color: #ff6f00;
-  }
-  
-  /* Stile per le immagini dei prodotti */
-  .product-image {
-    width: 40px;
-    height: 40px;
-    object-fit: center;
-    margin-right: 10px;
-    margin-left: 60px;
-  }
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #fff5e6;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  #name{
-    font-family: 'Arial', sans-serif; /* Sostituisci con il tuo font preferito */
-    font-size: 16px; /* Dimensione del carattere */
-    color: #333; /* Colore del testo */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */
-  }
+/* Stile per l'elemento li */
+li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ffa726;
+  transition: background 0.3s ease;
+  background: #ffe0b2;
+  border-radius: 8px;
+  margin: 10px 0;
+  display: flex;
+  /* Utilizzo di flexbox per allineare contenuti */
+  align-items: center;
+  /* Allinea verticalmente */
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  font-weight: bold;
+  margin: 500px 0;
+  color: #ef6c00;
+  font-size: 1.2em;
+}
+
+li:hover {
+  background: #ffcc80;
+}
+
+li a {
+  text-decoration: none;
+  color: #e65100;
+  transition: color 0.3s ease;
+}
+
+li a:hover {
+  color: #ff6f00;
+}
+
+/* Stile per le immagini dei prodotti */
+.product-image {
+  width: 40px;
+  height: 40px;
+  object-fit: center;
+  margin-right: 10px;
+  margin-left: 60px;
+}
+
+#name {
+  font-family: 'Arial', sans-serif;
+  /* Sostituisci con il tuo font preferito */
+  font-size: 16px;
+  /* Dimensione del carattere */
+  color: #333;
+  /* Colore del testo */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  /* Ombra leggera */
+}
