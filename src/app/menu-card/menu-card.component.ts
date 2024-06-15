@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { GeneralMenu } from '../model/generalMenu';
 import { Menu } from '../model/menu';
 
 @Component({
