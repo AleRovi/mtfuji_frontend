@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MenuCardComponent } from '../menu-card/menu-card.component';
 import { Menu } from '../model/menu';
 import { GeneralMenu } from '../model/generalMenu';
-import { FoodService } from '../food.service';
+import { FoodService } from '../service/food.service';
 
 @Component({
   selector: 'app-menu',
