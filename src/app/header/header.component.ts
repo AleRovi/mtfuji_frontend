@@ -22,4 +22,8 @@ export class HeaderComponent {
     this.router.navigate(['']);
   }
 
+  navigateToFilms() {
+    this.router.navigate(['/films']);
+    }
+
 }

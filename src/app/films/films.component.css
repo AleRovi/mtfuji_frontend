@@ -1,0 +1,76 @@
+/* Generale */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container del menu */
+  .menus-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titolo del menu */
+  .menu h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Lista di film */
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Elementi della lista */
+  .menu li {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    width: 220px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .menu li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Titolo del film */
+  .menu li #name {
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+  
+  /* Immagine del film */
+  .menu li #img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Eliminazione dei punti elenco */
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
