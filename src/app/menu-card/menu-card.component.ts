@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { GeneralMenu } from '../model/generalMenu';
 import { Menu } from '../model/menu';
+import { Food } from '../model/food';
 
 @Component({
   selector: 'app-menu-card',
@@ -11,11 +12,11 @@ import { Menu } from '../model/menu';
   styleUrl: './menu-card.component.css'
 })
 export class MenuCardComponent implements OnInit{
-  basePath = "images/food/";
+  basePath = "/images/food/";
   @Input() menu : Menu | null = null;
 
-  getImagePath(imageName: string) : string{
-    return this.basePath + imageName;
+  getImagePath(food : Food) : string{
+    return this.basePath + food.name + "png";
   }
 
 //   menu = {
