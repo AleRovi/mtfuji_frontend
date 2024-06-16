@@ -6,7 +6,11 @@ import { RegisterComponent } from './register/register.component';
 import { MenuBeverageComponent } from './menu-beverage/menu-beverage.component';
 =======
 import { FilmsComponent } from './films/films.component';
+<<<<<<< HEAD
 >>>>>>> Sonia
+=======
+import { LoginComponent } from './login/login.component';
+>>>>>>> origin/Sonia
 
 export const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -16,5 +20,9 @@ export const routes: Routes = [
     { path: "menuBeverage", component: MenuBeverageComponent },
 =======
     { path: "films", component: FilmsComponent },
+<<<<<<< HEAD
 >>>>>>> Sonia
+=======
+    { path: "login", component: LoginComponent },
+>>>>>>> origin/Sonia
 ];

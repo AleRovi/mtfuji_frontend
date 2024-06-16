@@ -3,6 +3,7 @@ import { User } from "../model/user";
 import { UserService } from "../service/user.service";
 import { catchError, of, tap } from "rxjs";
 import { FormsModule, NgForm } from "@angular/forms";
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -14,7 +15,7 @@ import { FormsModule, NgForm } from "@angular/forms";
 })
 export class RegisterComponent {
 
-  constructor(private userservice : UserService,){}
+  constructor(private userservice : UserService, private router : Router){}
 
   onSubmit(ngForm : NgForm) {
     console.log("mannaggia il clero");
@@ -31,10 +32,11 @@ export class RegisterComponent {
     console.log(currentUser);
       this.userservice.saveUser(currentUser).pipe(
         tap(() => {
-          console.log(ngForm.value);
+          alert('Registrazione effettuata');
+          this.router.navigate(['']);
         }),
         catchError((error: any) => {
-          console.log(error);
+          alert('Errore durante la registrazione');
           return of(null); // Ritorna un Observable vuoto o gestisci come preferisci
         })
       ).subscribe();
