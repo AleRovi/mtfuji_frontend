@@ -1,12 +1,34 @@
 import { Component } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LoginService } from '../service/login.service';
+import { LoginInfo } from '../model/LoginInfo';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  constructor(private router: Router, private loginService: LoginService){}
 
+  onSubmit(ngForm : NgForm){
+    const loginInfo : LoginInfo = {
+      email : ngForm.value.email,
+      password: ngForm.value.password,
+    }
+    this.loginService.login(loginInfo).subscribe({
+      next: (response) => {
+        console.log(response);
+        localStorage.setItem('token', response.token);
+        alert('Login effettuata');
+      },
+      error: err => {
+        console.log(err); 
+        alert('Errore durante il login');
+      },
+    });
+  }
 }
