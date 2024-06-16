@@ -1,4 +1,22 @@
-/* Stile per l'elemento ul */
+.menus-container {
+  display: flex 20; /* Imposta il layout Flexbox */
+  flex-wrap: wrap 10; /* Permette agli elementi di andare a capo */
+  justify-content: space-around; /* Distribuisce lo spazio intorno ai menu */
+  align-items: flex-start; /* Allinea i menu in alto */
+}
+
+.menu {
+  flex-basis: calc(50% - 20px); /* Larghezza base per ogni menu */
+  background-color: #f8f8f8; /* Sfondo chiaro per il menu */
+  border: 1px solid #dcdcdc; /* Bordo sottile */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
+  border-radius: 10px; /* Angoli arrotondati */
+  padding: 20px; /* Spazio interno */
+  margin: 10px; /* Spazio esterno */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza */
+  overflow: hidden; /* Nasconde il contenuto che sporge */
+}
+
 ul {
   list-style-type: none;
   padding: 0;

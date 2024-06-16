@@ -1,0 +1,18 @@
+@if (menuBeverage) {
+    <section>
+            <div>
+                <ul class="snacks-list">
+    
+                    <h2>Snacks:</h2>
+                    @for (s of menuBeverage.alcoholic; track s.id){
+                        <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}" class="product-image"> </li>
+                    }
+    
+                    <h2>Sandwiches:</h2>
+                    @for (s of menuBeverage.alcoholicFree; track s.id){
+                        <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}" class="product-image"></li>
+                    } 
+                </ul>
+            </div>
+    </section>
+}
