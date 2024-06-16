@@ -15,7 +15,6 @@ export class MenuComponent implements OnInit{
 
   generalMenu : GeneralMenu | null = null;
 
-
   constructor(private foodService : FoodService){ }
 
   ngOnInit(): void {
