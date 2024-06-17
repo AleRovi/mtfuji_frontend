@@ -1,18 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from '../model/user';
 import { Observable } from 'rxjs';
+import { Register } from '../model/register';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class RegisterService {
 
   private apiUrl = 'http://localhost:8080/register';
 
   constructor(private http : HttpClient) { }
 
-  saveUser(user : User) : Observable<User>{
-    return this.http.post<User>(this.apiUrl, user);
+  saveUser(user : Register) : Observable<any>{
+    return this.http.post<Register>(this.apiUrl, user);
   }
 }

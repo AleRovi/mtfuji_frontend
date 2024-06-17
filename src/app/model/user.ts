@@ -6,5 +6,4 @@ export interface User{
     email : string;
     address : string;
     fidelity_card : boolean;
-    password : string;
 }
