@@ -1,14 +1,35 @@
-/* Stile per l'elemento ul */
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 10px;
-  background: #fff5e6;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.menus-container {
+ 
+  display: grid;
+  /* Imposta il layout Gridbox */
+  grid-template-columns: repeat(2, 1fr);
+  /* ripete (2 colonne, 1fr),La frazione (fr) è un'unità che rappresenta una frazione dello spazio disponibile nel contenitore grid. 1fr= hanno lo stesso spazio*/
+  gap: 10px;
+  /*spaziatura tra le colonne e le righe*/
+  justify-content: space-around;
+  /* Distribuisce lo spazio intorno ai menu */
+  /* align-items: flex-start; /* Allinea i menu in alto */
+}
+
+.menu {
+  
+  /* flex-basis: calc(50% - 20px);/* Larghezza base per ogni menu */
+  background-color: #f8f8f8;
+  /* Sfondo chiaro per il menu */
+  border: 1px solid #dcdcdc;
+  /* Bordo sottile */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Ombra leggera per profondità */
+  border-radius: 10px;
+  /* Angoli arrotondati */
+  padding: 20px;
+  /* Spazio interno */
+  margin: 10px;
+  /* Spazio esterno */
+  box-sizing: border-box;
+  /* Include padding e bordo nella larghezza */
+  overflow: hidden;
+  /* Nasconde il contenuto che sporge */
 }
 
 /* Stile per l'elemento li */
@@ -24,32 +45,26 @@ li {
   align-items: center;
   /* Allinea verticalmente */
 }
-
 li:last-child {
   border-bottom: none;
 }
-
 h2 {
   font-weight: bold;
   margin: 500px 0;
   color: #ef6c00;
   font-size: 1.2em;
 }
-
 li:hover {
   background: #ffcc80;
 }
-
 li a {
   text-decoration: none;
   color: #e65100;
   transition: color 0.3s ease;
 }
-
 li a:hover {
   color: #ff6f00;
 }
-
 /* Stile per le immagini dei prodotti */
 .product-image {
   width: 40px;
@@ -58,7 +73,6 @@ li a:hover {
   margin-right: 10px;
   margin-left: 60px;
 }
-
 #name {
   font-family: 'Arial', sans-serif;
   /* Sostituisci con il tuo font preferito */

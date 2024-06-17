@@ -1,2 +1,18 @@
-<app-menu-card></app-menu-card>
+@if(generalMenu){
+    <section id="standardMenu">
+        <h2>STANDARD MENU</h2>
+        <app-menu-card [menu] = "generalMenu.standardMenu"></app-menu-card>
+    </section>
+    <section id="celiacMenu">
+        <h2>CELIAC MENU</h2>
+        <app-menu-card [menu] = "generalMenu.celiacMenu"></app-menu-card>
+    </section>
+    <section id="veganMenu">
+        <h2>VEGAN MENU</h2>
+        <app-menu-card [menu] = "generalMenu.veganMenu"></app-menu-card>
+    </section>
+}
+
+
+
 
