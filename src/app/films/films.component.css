@@ -61,7 +61,7 @@ body {
   }
   
   /* Immagine del film */
-  .menu li #img {
+  .film-img {
     width: 100%;
     height: auto;
     border-radius: 10px;

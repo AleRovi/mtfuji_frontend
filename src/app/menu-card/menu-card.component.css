@@ -1,8 +1,9 @@
 .menus-container {
-  display: flex 20; /* Imposta il layout Flexbox */
-  flex-wrap: wrap 10; /* Permette agli elementi di andare a capo */
+  display: grid; /* Imposta il layout Flexbox */
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-around; /* Distribuisce lo spazio intorno ai menu */
   align-items: flex-start; /* Allinea i menu in alto */
+  
 }
 
 .menu {

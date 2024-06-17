@@ -6,7 +6,7 @@
                     <section class="menu">
                         <h2>FILM DISPONIBILI QUESTA SETTIMANA:</h2>
                         @for (f of films; track f.id){
-                            <li id="name">{{f.title}} <img id="img" [src]="getImagePath(f)" alt="{{ f.title }}" class="product-image"> </li>
+                            <li id="name">{{f.title}} <img id="img" [src]="getImagePath(f)" alt="{{ f.imageName }}" class="product-image"> </li>
                         }
                     </section>
                 </ul>
