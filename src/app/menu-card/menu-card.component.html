@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<div>
-    <ul class="snacks-list">
-        <h1>Menu Standard</h1>
-
-=======
 @if (menu) {
 <div class="menus-container">
     <section class="menu">
->>>>>>> f92516a5b4734fe48d2d061a2cec7f0795512ad3
         <h2>Snacks:</h2>
         @for (s of menu.snacks; track s.id){
         <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image">
@@ -53,12 +46,6 @@
         <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image">
         </li>
         }
-<<<<<<< HEAD
-
-    </ul>
-</div>
-=======
     </section>
 </div>
 }
->>>>>>> f92516a5b4734fe48d2d061a2cec7f0795512ad3

@@ -10,11 +10,6 @@ import { Food } from '../model/food';
     templateUrl: './menu-card.component.html',
     styleUrl: './menu-card.component.css'
 })
-<<<<<<< HEAD
-export class MenuCardComponent implements OnInit{
-  basePath = "/images/food/";
-  @Input() menu : Menu | null = null;
-=======
 export class MenuCardComponent implements OnInit {
     basePath = "/images/food/";
     @Input() menu: Menu | null = null;
@@ -22,7 +17,6 @@ export class MenuCardComponent implements OnInit {
     getImagePath(food: Food): string {
         return this.basePath + food.name + "png";
     }
->>>>>>> f92516a5b4734fe48d2d061a2cec7f0795512ad3
 
     //   menu = {
     //         "snacks" :  [
