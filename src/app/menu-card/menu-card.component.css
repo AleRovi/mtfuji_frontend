@@ -1,5 +1,8 @@
 .menus-container {
+<<<<<<< HEAD
  
+=======
+>>>>>>> f92516a5b4734fe48d2d061a2cec7f0795512ad3
   display: grid;
   /* Imposta il layout Gridbox */
   grid-template-columns: repeat(2, 1fr);
@@ -12,7 +15,10 @@
 }
 
 .menu {
+<<<<<<< HEAD
   
+=======
+>>>>>>> f92516a5b4734fe48d2d061a2cec7f0795512ad3
   /* flex-basis: calc(50% - 20px);/* Larghezza base per ogni menu */
   background-color: #f8f8f8;
   /* Sfondo chiaro per il menu */
@@ -30,6 +36,21 @@
   /* Include padding e bordo nella larghezza */
   overflow: hidden;
   /* Nasconde il contenuto che sporge */
+<<<<<<< HEAD
+=======
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #fff5e6;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+>>>>>>> f92516a5b4734fe48d2d061a2cec7f0795512ad3
 }
 
 /* Stile per l'elemento li */

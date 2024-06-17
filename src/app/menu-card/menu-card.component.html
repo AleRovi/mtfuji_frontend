@@ -1,36 +1,64 @@
+<<<<<<< HEAD
 <div>
     <ul class="snacks-list">
         <h1>Menu Standard</h1>
 
+=======
+@if (menu) {
+<div class="menus-container">
+    <section class="menu">
+>>>>>>> f92516a5b4734fe48d2d061a2cec7f0795512ad3
         <h2>Snacks:</h2>
-        @for (m of menu.snacks; track m.id){
-        <li id="name">{{m.name}} <img id="img" [src]="m.imagePath" alt="{{ m.name }}" class="product-image"></li>
+        @for (s of menu.snacks; track s.id){
+        <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image">
+        </li>
         }
+    </section>
 
+    <section class="menu">
         <h2>Sandwiches:</h2>
-        @for (m of menu.sandwiches; track m.id){
-        <li id="name">{{m.name}} <img id="img" [src]="m.imagePath" alt="{{ m.name }}" class="product-image"></li>
+        @for (s of menu.sandwiches; track s.id){
+        <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image">
+        </li>
         }
+    </section>
 
+    <section class="menu">
         <h2>Fried Foods:</h2>
-        @for (m of menu.friedFoods; track m.id){
-        <li id="name">{{m.name}} <img id="img" [src]="m.imagePath" alt="{{ m.name }}" class="product-image"></li>
+        @for (f of menu.friedFoods; track f.id){
+        <li id="name">{{f.name}} <img id="img" [src]="getImagePath(f)" alt="{{ f.name }}" class="product-image">
+        </li>
         }
+    </section>
 
+    <section class="menu">
         <h2>Salads:</h2>
-        @for (m of menu.salads; track m.id){
-        <li id="name">{{m.name}} <img id="img" [src]="m.imagePath" alt="{{ m.name }}" class="product-image"></li>
+        @for (s of menu.salads; track s.id){
+        <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image">
+        </li>
         }
+    </section>
 
+    <section class="menu">
         <h2>Desserts:</h2>
-        @for (m of menu.desserts; track m.id){
-        <li id="name">{{m.name}} <img id="img" [src]="m.imagePath" alt="{{ m.name }}" class="product-image"></li>
+        @for (d of menu.desserts; track d.id){
+        <li id="name">{{d.name}} <img id="img" [src]="getImagePath(d)" alt="{{ d.name }}" class="product-image">
+        </li>
         }
+    </section>
 
+    <section class="menu">
         <h2>Special Foods:</h2>
-        @for (m of menu.specialFoods; track m.id){
-        <li id="name">{{m.name}} <img id="img" [src]="m.imagePath" alt="{{ m.name }}" class="product-image"></li>
+        @for (s of menu.specialFoods; track s.id){
+        <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image">
+        </li>
         }
+<<<<<<< HEAD
 
     </ul>
 </div>
+=======
+    </section>
+</div>
+}
+>>>>>>> f92516a5b4734fe48d2d061a2cec7f0795512ad3
