@@ -1,0 +1,44 @@
+/* Stile base per la pagina */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Stili per le sezioni del menu */
+  section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  /* Stili per le card del menu */
+  app-menu-card {
+    display: block;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  /* Stili specifici per i menu */
+  #standardMenu app-menu-card {
+    border-left: 5px solid #007bff;
+  }
+  
+  #celiacMenu app-menu-card {
+    border-left: 5px solid #28a745;
+  }
+  
+  #veganMenu app-menu-card {
+    border-left: 5px solid #ffc107;
+  }
+  
