@@ -1,11 +1,17 @@
-@if(generalMenubeverage){
-    <section id="alcoholic menu">
-        <h2>ALCOHOLIC MENU</h2>
-        <app-menu-beverage-card [menuBeverage] = "generalMenubeverage.alcoholicMenu"></app-menu-beverage-card>
-    </section>
-    <section id="alcoholic free">
-        <h2>ALCOHOLIC FREE</h2>
-        <app-menu-beverage-card [menuBeverage] = "generalMenubeverage.alcoholicFree"></app-menu-beverage-card>
-    </section>
-}
-   
+@if (menuBeverage) {
+        <section class="menu">
+            <h2>ALCOLICI:</h2>
+            @for (s of menuBeverage.alcoholic; track s.id){
+            <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}"
+                    class="product-image"> </li>
+            }
+        </section>
+    
+        <section>
+            <h2>ANALCOLICI:</h2>
+            @for (s of menuBeverage.alcoholicFree; track s.id){
+            <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}"
+                    class="product-image"></li>
+            }
+        </section>
+    }

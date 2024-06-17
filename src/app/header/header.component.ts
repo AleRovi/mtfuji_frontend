@@ -12,18 +12,22 @@ import { MenuComponent } from '../menu/menu.component';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router){}
+  constructor(private router: Router) { }
 
   navigateToFoodMenu() {
     this.router.navigate(['/food']);
   }
 
-  navigateToHome(){
+  navigateToHome() {
     this.router.navigate(['']);
   }
 
   navigateToFilms() {
     this.router.navigate(['/films']);
-    }
+  }
+
+  navigateToBeverage() {
+    this.router.navigate(['/beverage']);
+  }
 
 }

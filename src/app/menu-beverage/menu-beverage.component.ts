@@ -1,24 +1,29 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GeneralMenuBeverage } from '../model/generalMenuBeverage';
 import { BeverageService } from '../service/beverage.service';
-import { MenuBeverageCardComponent } from '../menu-beverage-card/menu-beverage-card.component';
+import { RouterModule } from '@angular/router';
+import { MenuBeverage } from '../model/menuBeverage';
 
 @Component({
   selector: 'app-menu-beverage',
   standalone: true,
-  imports: [MenuBeverageCardComponent],
+  imports: [RouterModule],
   templateUrl: './menu-beverage.component.html',
   styleUrl: './menu-beverage.component.css'
 })
 export class MenuBeverageComponent implements OnInit{
-  
-  generalMenubeverage : GeneralMenuBeverage | null = null;
+
+  basePath = "images/beverage/";
+  menuBeverage : MenuBeverage | null = null;
 
   constructor(private beverageService : BeverageService){ }
 
+  getImagePath(imageName: string) : string{
+    return this.basePath + imageName;
+  }
+
   ngOnInit(): void {
     this.beverageService.getMenu().subscribe( {
-      next: gm => this.generalMenubeverage = gm,
+      next: gm => this.menuBeverage = gm,
       error: err => console.log(err)
     });
   }
