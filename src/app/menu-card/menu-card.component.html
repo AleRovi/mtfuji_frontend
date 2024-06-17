@@ -13,9 +13,8 @@
   <section class="menu">
     <h2>Sandwiches:</h2>
     @for (s of menu.sandwiches; track s.id){
-    <li id="name">
-      {{ s.name }}
-      <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image" />
+    <li id="name"> <p class="mName">{{ s.name }}</p>
+      <p><img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image" /></p>
     </li>
     }
   </section>

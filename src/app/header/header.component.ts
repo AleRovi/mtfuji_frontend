@@ -1,12 +1,11 @@
 import { mergeNsAndName } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MenuComponent],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
