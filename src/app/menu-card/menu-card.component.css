@@ -1,13 +1,12 @@
 .menus-container {
+  gap: 10px; /*spaziatura tra riga e colonna*/
   display: grid; /* Imposta il layout Flexbox */
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /*creare una griglia, il primo valore è il num di col e il secondo è un un'utà di misura */
   justify-content: space-around; /* Distribuisce lo spazio intorno ai menu */
-  align-items: flex-start; /* Allinea i menu in alto */
-  
+  padding: 10px;
 }
 
 .menu {
-  flex-basis: calc(50% - 20px); /* Larghezza base per ogni menu */
   background-color: #f8f8f8; /* Sfondo chiaro per il menu */
   border: 1px solid #dcdcdc; /* Bordo sottile */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
@@ -17,18 +16,6 @@
   box-sizing: border-box; /* Include padding e bordo nella larghezza */
   overflow: hidden; /* Nasconde il contenuto che sporge */
 }
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 10px;
-    background: #fff5e6;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
   
   /* Stile per l'elemento li */
   li {
