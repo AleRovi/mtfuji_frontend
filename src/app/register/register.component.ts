@@ -3,7 +3,6 @@ import { User } from "../model/user";
 import { catchError, of, tap } from "rxjs";
 import { FormsModule, NgForm } from "@angular/forms";
 import { Router, RouterModule } from "@angular/router";
-import { Register } from "../model/register";
 import { RegisterService } from "../service/register.service";
 
 
@@ -16,29 +15,31 @@ import { RegisterService } from "../service/register.service";
 })
 export class RegisterComponent implements OnInit{
 
+  currentUser : User | null = null;
   constructor(private userservice : RegisterService, private router : Router){}
   ngOnInit(): void {
     return;
   }
 
   onSubmit(ngForm : NgForm) {
-    const currentUser : User = {
+    this.currentUser = {
       firstname : ngForm.value.firstname,
       lastname : ngForm.value.lastname,
       age : ngForm.value.age,
       email : ngForm.value.email,
       address : ngForm.value.address,
       fidelity_card : ngForm.value.fidelity_card,
-    }
-
-    const register: Register = {
-      user: currentUser,
       password: ngForm.value.password
     }
+
+    // const register: Register = {
+    //   user: currentUser,
+    //   password: ngForm.value.password
+    // }
     
-    this.userservice.saveUser(register).subscribe({
+    this.userservice.saveUser(this.currentUser).subscribe({
         next : () => {
-          this.router.navigate(['/register']);
+          this.router.navigate(['/login']);
         },
         error : (err: string) => {
           console.log(err);

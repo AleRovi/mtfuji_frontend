@@ -1,8 +1,6 @@
 import { Beverage } from "./beverage";
 
-
-export interface MenuBeverage{
-    alcoholic : Beverage[];
+export interface BeverageMenu{
+    alcoholicDrinks : Beverage[];
     alcoholicFree : Beverage[];
-    
 }

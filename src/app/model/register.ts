@@ -1,6 +1,6 @@
-import { User } from "./user";
+// import { User } from "./user";
 
-export interface Register{
-    user : User,
-    password : string,
-}
+// export interface Register{
+//     user : User,
+//     password : string,
+// }

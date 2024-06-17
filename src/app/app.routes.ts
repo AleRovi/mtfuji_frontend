@@ -8,9 +8,9 @@ import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     { path: "", component: HomeComponent },
-    { path: "food", component: MenuComponent,},
+    { path: "foods", component: MenuComponent,},
     { path: "register", component: RegisterComponent },
-    { path: "beverage", component: MenuBeverageComponent },
+    { path: "beverages", component: MenuBeverageComponent },
     { path: "films", component: FilmsComponent },
     { path: "login", component: LoginComponent },
 ];

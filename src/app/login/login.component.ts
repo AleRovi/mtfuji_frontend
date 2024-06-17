@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { LoginService } from '../service/login.service';
@@ -12,7 +12,7 @@ import { LoginInfo } from '../model/loginInfo';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private router: Router, private loginService: LoginService){}
+  constructor(private router: Router,private loginService: LoginService){}
 
   onSubmit(ngForm : NgForm){
 

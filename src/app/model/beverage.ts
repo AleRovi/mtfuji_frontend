@@ -1,5 +1,5 @@
 export interface Beverage{
-    id : number;
+    id? : number;
     name : string;
     cost : number;
     complimentary : boolean;

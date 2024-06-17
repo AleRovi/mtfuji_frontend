@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BeverageService } from '../service/beverage.service';
 import { RouterModule } from '@angular/router';
-import { MenuBeverage } from '../model/menuBeverage';
+import { Beverage } from '../model/beverage';
+import { BeverageMenu } from '../model/beverage-menu';
 
 @Component({
   selector: 'app-menu-beverage',
@@ -13,7 +14,7 @@ import { MenuBeverage } from '../model/menuBeverage';
 export class MenuBeverageComponent implements OnInit{
 
   basePath = "images/beverage/";
-  menuBeverage : MenuBeverage | null = null;
+  beverageMenu : BeverageMenu | null = null;
 
   constructor(private beverageService : BeverageService){ }
 
@@ -23,12 +24,8 @@ export class MenuBeverageComponent implements OnInit{
 
   ngOnInit(): void {
     this.beverageService.getMenu().subscribe( {
-      next: gm => this.menuBeverage = gm,
+      next: bm => this.beverageMenu = bm,
       error: err => console.log(err)
     });
-  }
-
-  trackByFn (index: number, item: any): any{
-    return item.id;
   }
 }

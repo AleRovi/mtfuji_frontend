@@ -1,15 +1,15 @@
-@if (menuBeverage) {
-        <section class="menu">
-            <h2>ALCOLICI:</h2>
-            @for (s of menuBeverage.alcoholic; track s.id){
-            <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}"
-                    class="product-image"> </li>
-            }
-        </section>
+@if (beverageMenu) {
+            <section class="menu">
+                <h2>ALCOLICI:</h2>
+                @for (s of beverageMenu.alcoholicDrinks; track s.id){
+                <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}"
+                        class="product-image"> </li>
+                }
+            </section>
     
         <section>
             <h2>ANALCOLICI:</h2>
-            @for (s of menuBeverage.alcoholicFree; track s.id){
+            @for (s of beverageMenu.alcoholicFree; track s.id){
             <li id="name">{{s.name}} <img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}"
                     class="product-image"></li>
             }

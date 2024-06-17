@@ -8,7 +8,7 @@ import { GeneralMenu } from '../model/generalMenu';
 })
 export class FoodService {
 
-  private apiUrl = 'http://localhost:8080/food';
+  private apiUrl = 'http://localhost:8080/menu-food';
 
   constructor(private http : HttpClient) { }
 

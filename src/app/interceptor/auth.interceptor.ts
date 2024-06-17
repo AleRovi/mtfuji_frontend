@@ -8,8 +8,8 @@ import { Observable } from "rxjs";
 
 export class AuthInterceptor implements HttpInterceptor{
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        throw new Error("Method not implemented.");
-        const token = localStorage.getItem("token");
+        try{
+            const token = localStorage.getItem("token");
         if(token){
             const cloned = req.clone({
                 headers: req.headers.set('Authorization', 'Bearer ' + token)
@@ -17,6 +17,9 @@ export class AuthInterceptor implements HttpInterceptor{
             return next.handle(cloned);
         }else{
             return next.handle(req);
+        }
+        }catch{
+            throw new Error("Method not implemented.");
         }
     }   
 }
