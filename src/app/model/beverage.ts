@@ -5,4 +5,5 @@ export interface Beverage{
     complimentary : boolean;
     description : string;
     isAlcoholic : boolean;
+    imageName : string;
 }

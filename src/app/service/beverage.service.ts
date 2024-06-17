@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { GeneralMenuBeverage } from '../model/generalMenuBeverage';
 import { Observable } from 'rxjs';
+import { MenuBeverage } from '../model/menuBeverage';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class BeverageService {
 
   constructor(private http : HttpClient) { }
 
-  getMenu() : Observable<GeneralMenuBeverage>{
-    return this.http.get<GeneralMenuBeverage>(this.apiUrl);
+  getMenu() : Observable<MenuBeverage>{
+    return this.http.get<MenuBeverage>(this.apiUrl);
   }
 }
