@@ -1,4 +1,5 @@
 /* Header Styles */
+
 :host {
     display: block;
     background: linear-gradient(to right,/*  #f1c8c9, #e18699 */ #000000,#f3f1f0 );/*da modificare*/

@@ -11,10 +11,12 @@ import { RegisterComponent } from '../register/register.component';
 })
 export class HomeComponent {
 
-  constructor(private router: Router){}
+  constructor(private router: Router) { }
 
   navigateToRegister() {
     this.router.navigate(['/register']);
   }
-
+  navigateToLogin() {
+    this.router.navigate(['/login']);
+  }
 }
