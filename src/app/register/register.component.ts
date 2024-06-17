@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { User } from "../model/user";
-import { UserService } from "../service/user.service";
 import { catchError, of, tap } from "rxjs";
 import { FormsModule, NgForm } from "@angular/forms";
 import { Router, RouterModule } from "@angular/router";
