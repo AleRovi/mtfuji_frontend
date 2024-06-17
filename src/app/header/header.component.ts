@@ -14,8 +14,8 @@ export class HeaderComponent {
 
   constructor(private router: Router){}
 
-  navigateToMenu() {
-    this.router.navigate(['/menu']);
+  navigateToFoodMenu() {
+    this.router.navigate(['/food']);
   }
 
   navigateToHome(){
