@@ -29,4 +29,8 @@ export class HeaderComponent {
     this.router.navigate(['/beverages']);
   }
 
+  navigateToKaraoke() {
+    this.router.navigate(['/karaoke']);
+  }
+
 }

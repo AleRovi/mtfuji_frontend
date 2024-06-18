@@ -1,22 +1,25 @@
 @if (beverageMenu) {
-<h2>ALCOLICI:</h2>
-<section class="menu">
-    @for (s of beverageMenu.alcoholicDrinks; track s.id){
-    <li class="list">
-        <div id="name">{{s.name}}</div>
-        <div class="product-image"><img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}"></div>
-    </li>
-    }
+<section id="section">
+    <p class="title">ALCOLICI:</p>
+    <section class="menu">
+        @for (s of beverageMenu.alcoholicDrinks; track s.id){
+        <li class="list">
+            <div id="name">{{s.name}}</div>
+            <div class="product-image"><img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}"></div>
+        </li>
+        }
+    </section>
 </section>
-
-<h2>ANALCOLICI:</h2>
-<section class="menu">
-    @for (s of beverageMenu.alcoholicFree; track s.id){
-    <li>
-        <div id="name">{{s.name}}</div>
-        <div class="product-image"><img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}"
-                class="product-image"></div>
-    </li>
-    }
+<section>
+    <p class="title">ANALCOLICI:</p>
+    <section class="menu">
+        @for (s of beverageMenu.alcoholicFree; track s.id){
+        <li>
+            <div id="name">{{s.name}}</div>
+            <div class="product-image"><img id="img" [src]="getImagePath(s.imageName)" alt="{{ s.name }}"
+                    class="product-image"></div>
+        </li>
+        }
+    </section>
 </section>
 }

@@ -44,7 +44,6 @@ export class RegisterComponent implements OnInit{
         error : (err: string) => {
           console.log(err);
         }});
-
   }
 }
 

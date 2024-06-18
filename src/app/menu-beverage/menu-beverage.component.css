@@ -5,11 +5,6 @@ body {
     padding: 20px;
   }
   
-  h2 {
-    color: #333;
-    text-align: center;
-  }
-  
  .menu{
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
@@ -71,4 +66,30 @@ li a:hover {
   display: flex;
   justify-content: center;
   font-weight: bold;
+}
+
+.title {
+  text-align: center; /* Centra il testo del titolo */
+  width: 100%; /* Fa sì che il titolo prenda tutta la larghezza disponibile */
+  margin-bottom: 20px; /* Aggiunge spazio sotto il titolo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Jakarta', sans-serif;
+  font-weight: bold;
+  font-size: 2.5em; /* Aumenta la dimensione del testo */
+  color: white; /* Colore del testo */
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sfondo con gradiente */
+  padding: 20px; /* Aggiunge spazio interno */
+  border-radius: 15px; /* Bordo arrotondato */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombra al testo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombra al testo */
+}
+
+section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 15px;
 }
