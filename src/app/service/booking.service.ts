@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Booking } from '../model/booking';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BookingService {
+export class KaraokeService {
 
-  constructor() { }
+  private apiUrl = 'http://localhost:8080/karaoke';
+
+  constructor(private http : HttpClient) { }
+
+  getSongs(): Observable<Karaoke> {
+    return this.http.get<Karaoke>(this.apiUrl);
+  }
 }
