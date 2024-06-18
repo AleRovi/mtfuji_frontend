@@ -2,7 +2,7 @@
 
 :host {
     display: block;
-    background: linear-gradient(to right,/*  #f1c8c9, #e18699 */ #000000,#f3f1f0 );/*da modificare*/
+    background: linear-gradient(to right,/*  #f1c8c9, #e18699 */ #000000,#ee570b );/*da modificare*/
     color: white;
     padding: 20px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -11,7 +11,9 @@
 .container {
     width: 90%;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1200px;  
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
 }
 
 /* header h1 {
@@ -52,14 +54,18 @@ nav ul li a {
 .btn {
     padding: 15px 30px;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 2em;
     margin: 10px;
+    text-transform: uppercase;
     display: inline-block;
     animation: flicker 1.5s infinite alternate;
-    transition: background 0.3s ease, transform 0.3s ease;
+    /* transition: background 0.3s ease, transform 0.3s ease; */
 
 }
 
+p{
+    font-size: 1.2em;
+}
 /* .btn:hover {
     background: #e04e50;
     transform: translateY(-3px);
@@ -68,7 +74,7 @@ nav ul li a {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    color: red;
+    color: rgb(250, 36, 36);
     text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red;
 }
 
@@ -80,8 +86,8 @@ nav ul li a {
 }
 
 #sign3 {
-    top: 50%;
-    left: 80%;
+    top: 10%;
+    left: 50%;
     color: magenta;
     text-shadow: 0 0 10px magenta, 0 0 20px magenta, 0 0 30px magenta, 0 0 40px magenta, 0 0 50px magenta, 0 0 60px magenta, 0 0 70px magenta;
 }
@@ -89,14 +95,14 @@ nav ul li a {
 #sign4 {
     bottom: 20%;
     left: 30%;
-    color: blue;
+    color: rgb(72, 116, 250);
     text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
 }
 
 #sign5 {
     bottom: 10%;
     right: 20%;
-    color: lime;
+    color: rgb(5, 117, 5);
     text-shadow: 0 0 10px lime, 0 0 20px lime, 0 0 30px lime, 0 0 40px lime, 0 0 50px lime, 0 0 60px lime, 0 0 70px lime;
 }
 
@@ -118,7 +124,7 @@ nav ul li a {
     bottom: 10%;
     right: 50%;
     transform: translateX(50%);
-    color: purple;
+    color: rgb(77, 2, 77);
     text-shadow: 0 0 10px purple, 0 0 20px purple, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
 }
 
