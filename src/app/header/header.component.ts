@@ -30,4 +30,7 @@ export class HeaderComponent {
     this.router.navigate(['/beverages']);
   }
 
+  navigateToBooking(){
+    this.router.navigate(['/booking']);
+  }
 }
