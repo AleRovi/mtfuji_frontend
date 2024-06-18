@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { GeneralMenuBeverage } from '../model/generalMenuBeverage';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
+import { Beverage } from '../model/beverage';
+import { BeverageMenu } from '../model/beverage-menu';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +10,11 @@ import { Observable } from 'rxjs';
 export class BeverageService {
 
   
-  private apiUrl = 'http://localhost:8080/beverage';
+  private apiUrl = 'http://localhost:8080/menu-beverage';
 
   constructor(private http : HttpClient) { }
 
-  getMenu() : Observable<GeneralMenuBeverage>{
-    return this.http.get<GeneralMenuBeverage>(this.apiUrl);
+  getMenu(): Observable<BeverageMenu> {
+    return this.http.get<BeverageMenu>(this.apiUrl);
   }
 }

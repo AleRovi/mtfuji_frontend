@@ -35,6 +35,6 @@ export class FilmsComponent implements OnInit{
 
   getImagePath(film : Movie): string {
     // Assuming you have a function to build the image path
-    return `images/menu/${film.title}`;
+    return `images/film/${film.imageName}`;
   }
 }

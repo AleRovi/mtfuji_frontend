@@ -1,15 +1,16 @@
-
-    <section>
-            <div class="menus-container">
-                <ul >
-    
-                    <section class="menu">
-                        <h2>FILM DISPONIBILI QUESTA SETTIMANA:</h2>
-                        @for (f of films; track f.id){
-                            <li id="name">{{f.title}} <img id="img" [src]="getImagePath(f)" alt="{{ f.title }}" class="product-image"> </li>
-                        }
-                    </section>
-                </ul>
-            </div>
-    </section> 
-
+<section>
+    <div class="menus-container">
+      <section class="menu">
+        <p class="title">FILM DISPONIBILI QUESTA SETTIMANA:</p>
+        <ul class="film-list">
+          @for (f of films; track f.id) {
+                <li>
+                <div id="name" class="film">{{ f.title }}</div>
+                    <div class="product-image"><img id="img" [src]="getImagePath(f)" alt="{{ f.imageName }}" ></div>
+                </li> 
+          }
+        </ul>
+      </section>
+    </div>
+  </section>
+  

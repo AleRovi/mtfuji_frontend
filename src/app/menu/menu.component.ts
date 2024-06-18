@@ -14,12 +14,14 @@ export class MenuComponent implements OnInit{
 
   generalMenu : GeneralMenu | null = null;
 
-
   constructor(private foodService : FoodService){ }
 
   ngOnInit(): void {
     this.foodService.getMenu().subscribe( {
-      next: gm => this.generalMenu = gm,
+      next: gm => {
+        this.generalMenu = gm;
+        console.log(gm);
+      },
       error: err => console.log(err)
     });
   }

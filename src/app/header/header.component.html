@@ -1,27 +1,15 @@
 <div class="container">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    const signs = document.querySelectorAll('.neon-sign');
-    
-    signs.forEach(sign => {
-        setInterval(() => {
-            sign.style.animationDelay = `${Math.random() * 2}s`;
-        }, 2000);
-    });
-});
-
-    </script>
     <h1>Booking Karaoke & Movies</h1>
     <nav>
         <ul>
-            <li><a routerLink="/home" class="btn" id="sign1" (click)="navigateToHome()"><p>Home</p></a></li>
-            <li><a routerLink="/booking" class="btn" id="sign2" ><p>Prenota</p></a></li>
-            <li><a routerLink="/karaoke" class="btn" id="sign3" ><p>Karaoke</p></a></li>
-            <li><a routerLink="/films" class="btn" id="sign4"  (click)="navigateToFilms()"><p>Films</p></a></li>
-            <li><a routerLink="/menu" class="btn" id="sign5"  (click)="navigateToMenu()"><p>Menu</p></a></li>
-            <li><a routerLink="/beverage" class="btn" id="sign6" ><p>Beverage</p></a></li>
-            <li><a routerLink="/rooms" class="btn" id="sign7" ><p>Stanze</p></a></li>
-            <li><a routerLink="/contact" class="btn" id="sign8" ><p>Contatti</p></a></li>
+            <li><a routerLink="/home" class="btn" (click)="navigateToHome()">Home</a></li>
+            <li><a routerLink="/booking" class="btn" (click)="navigateToBooking()">Prenota</a></li>
+            <li><a routerLink="/karaoke" class="btn" (click)="navigateToKaraoke()">Karaoke</a></li>
+            <li><a routerLink="/films" class="btn" (click)="navigateToFilms()">Films</a></li>
+            <li><a routerLink="/menu" class="btn" (click)="navigateToFoodMenu()">Menu</a></li>
+            <li><a routerLink="/beverage" class="btn"(click)="navigateToBeverage()">Beverage</a></li>
+            <li><a routerLink="/rooms" class="btn">Stanze</a></li>
+            <li><a routerLink="/contact" class="btn">Contatti</a></li>
         </ul>
     </nav>
 </div>
