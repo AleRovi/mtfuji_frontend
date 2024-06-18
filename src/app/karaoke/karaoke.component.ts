@@ -18,7 +18,6 @@ export class KaraokeComponent implements OnInit{
   ngOnInit(): void {
     this.karaokeService.getSongs().subscribe({
       next: (songsObject) => {
-        // Converti l'oggetto in un array di valori (i tuoi film)
         this.songs = Object.values(songsObject);
       },
       error: err => console.error(err)
