@@ -11,7 +11,7 @@
   border: 1px solid #dcdcdc; /* Bordo sottile */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
   border-radius: 10px; /* Angoli arrotondati */
-  padding: 20px; /* Spazio interno */
+  padding: 10px; /* Spazio interno */
   margin: 10px; /* Spazio esterno */
   box-sizing: border-box; /* Include padding e bordo nella larghezza */
   overflow: hidden; /* Nasconde il contenuto che sporge */
@@ -40,9 +40,9 @@
     font-size: 1.2em;
   }
   
-  li:hover {
-    background: #ffcc80;
-  }
+  /* li:hover {
+      transform;
+  } */
   
   li a {
     text-decoration: none;
@@ -56,15 +56,15 @@
   
   /* Stile per le immagini dei prodotti */
   .product-image {
-    width: 40px;
-    height: 40px;
-    object-fit: center;
+    display: flex;
+    width: auto;
+    height: 50px;
     margin-right: 10px;
     margin-left: 60px;
+    justify-content: right;
   }
 
   #name{
-    font-family: 'Arial', sans-serif; /* Sostituisci con il tuo font preferito */
     font-size: 16px; /* Dimensione del carattere */
     color: #333; /* Colore del testo */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */

@@ -7,7 +7,7 @@ import { BeverageMenu } from '../model/beverage-menu';
 @Component({
   selector: 'app-menu-beverage',
   standalone: true,
-  imports: [RouterModule],
+  imports: [],
   templateUrl: './menu-beverage.component.html',
   styleUrl: './menu-beverage.component.css'
 })
