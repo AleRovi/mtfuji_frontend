@@ -10,10 +10,10 @@ import { BookingComponent } from './booking/booking.component';
 
 export const routes: Routes = [
     { path: "", component: HomeComponent },
-    { path: "foods", component: MenuComponent,},
+    { path: "food", component: MenuComponent,},
     { path: "register", component: RegisterComponent },
-    { path: "beverages", component: MenuBeverageComponent },
-    { path: "films", component: FilmsComponent },
+    { path: "beverage", component: MenuBeverageComponent },
+    { path: "film", component: FilmsComponent },
     { path: "login", component: LoginComponent },
     { path: "karaoke", component: KaraokeComponent },
     { path: "booking", component: BookingComponent },
