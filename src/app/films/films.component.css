@@ -50,8 +50,14 @@
   background: #ffe0b2;
   border-radius: 8px;
   margin: 10px 0;
-  display: flex; /* Utilizzo di flexbox per allineare contenuti */
   align-content: center;
+  
+  font-size: 26px; /* Dimensione del carattere */
+  color: #333; /* Colore del testo */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .film:hover {
@@ -64,13 +70,4 @@
   height: 470px;
   margin-right: 3px;
   justify-content: center;
-}
-
-#name {
-  font-size: 26px; /* Dimensione del carattere */
-  color: #333; /* Colore del testo */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
 }

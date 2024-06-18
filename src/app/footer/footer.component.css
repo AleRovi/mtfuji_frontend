@@ -5,37 +5,40 @@
     color: white;
     text-align: center;
     padding: 20px 0;
+    list-style: none;
 }
 
 .container {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;
+    list-style: none;
 }
 
 footer p {
     margin: 0;
     font-size: 1em;
+    list-style: none;
 }
 
 footer ul {
     list-style: none;
     padding: 0;
     margin: 10px 0 0 0;
+    list-style-type: none;
 }
 
-footer ul li {
+footer ul p {
     display: inline;
     margin: 0 10px;
+    list-style-type: none;
+    
 }
 
-footer ul li a {
+footer ul p a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-}
-
-footer ul li a:hover {
-    color: #ff5a5f;
+    list-style-type: none;
 }
