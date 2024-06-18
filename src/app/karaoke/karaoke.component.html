@@ -1,16 +1,13 @@
-<section>
-    <div class="menus-container">
-      <section class="menu">
-        <p class="title">ALCUNE DELLE CANZONI DISPONIBILI AL KARAOKE:</p>
-        <ul class="karaoke-list">
-          @for (s of songs; track s.id) {
-                <li>
-                <div id="name" class="karaoke">{{s.singer}}
-                     {{ s.title }}</div>
-                </li> 
-          }
-        </ul>
-      </section>
-    </div>
+<div class="menus-container">
+  <section class="menu">
+    <p class="title">ALCUNE DELLE CANZONI DISPONIBILI AL KARAOKE</p>
+    <ul class="karaoke-list">
+      @for (s of songs; track s.id) {
+      <li id="name" class="karaoke">
+          ARTISTA: {{s.singer}}
+          <br>TITOLO: {{ s.title }}
+      </li>
+      }
+    </ul>
   </section>
-  
+</div>

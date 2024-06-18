@@ -36,7 +36,7 @@
   
   .karaoke-list {
     display: grid; /* Utilizza CSS Grid per la disposizione */
-    grid-template-columns: repeat(5, 1fr); /* Griglia a 3 colonne */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 10px; /* Spazio tra gli elementi della griglia */
     list-style: none; /* Rimuove i puntini dalla lista */
     padding: 0; /* Rimuove il padding predefinito */
@@ -59,7 +59,7 @@
   }
   
   #name {
-    font-size: 26px; /* Dimensione del carattere */
+    font-size: 22px; /* Dimensione del carattere */
     color: #333; /* Colore del testo */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */
     display: flex;
