@@ -15,9 +15,9 @@
 }
 
 .menu {
-  background-color: #f8f8f8; /* Sfondo chiaro per il menu */
+   /* Sfondo chiaro per il menu */
   border: 1px solid #dcdcdc; /* Bordo sottile */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
+  box-shadow: 0 2px 4px rgba(160, 160, 160, 0.1); /* Ombra leggera per profondità */
   border-radius: 10px; /* Angoli arrotondati */
   padding: 10px; /* Spazio interno */
   margin: 10px; /* Spazio esterno */
@@ -30,7 +30,7 @@
     padding: 15px 20px;
     border-bottom: 1px solid #ffa726;
     transition: background 0.3s ease;
-    background: #ffe0b2;
+    background: linear-gradient(180deg, white, rgb(246, 191, 89), rgb(254, 89, 89));
     border-radius: 8px;
     margin: 10px 0;
     list-style: none;
@@ -84,9 +84,9 @@
     font-weight: bold;
     font-size: 2.5em; /* Aumenta la dimensione del testo */
     color: white; /* Colore del testo */
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sfondo con gradiente */
-    padding: 20px; /* Aggiunge spazio interno */
-    border-radius: 15px; /* Bordo arrotondato */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombra al testo */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombra al testo */
+    background: linear-gradient(135deg, #2e6db4, #00ac9f, #f3c300); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
   }

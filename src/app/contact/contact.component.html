@@ -1,17 +1,22 @@
-  <div class="container">
-    <h2>Contatti</h2>
-    <ul>
-      <li *ngFor="let contact of contacts" (click)="selectContact(contact)" [class.selected]="contact === selectedContact">
-        {{ contact.name }} - {{ contact.email }}
-      </li>
-    </ul>
-    
-    <div *ngIf="selectedContact" class="contact-details">
-      <h3>Dettagli del Contatto</h3>
-      <p><span>Nome:</span> {{ selectedContact.name }}</p>
-      <p><span>Città:</span> {{ selectedContact.citta }}</p>
-      <p><span>GitHub:</span> <a href="https://github.com/{{ selectedContact.gitHub }}" target="_blank">{{ selectedContact.gitHub }}</a></p>
-      <p><span>Email:</span> <a href="mailto:{{ selectedContact.email }}">{{ selectedContact.email }}</a></p>
+<section>
+  <div class="maxContainer">
+    <div class="container">
+      <h2>Contatti</h2>
+      <ul>
+        <li *ngFor="let contact of contacts" (click)="selectContact(contact)"
+          [class.selected]="contact === selectedContact">
+          {{ contact.name }} - {{ contact.email }}
+        </li>
+      </ul>
+
+      <div *ngIf="selectedContact" class="contact-details">
+        <h3>Dettagli del Contatto</h3>
+        <p><span>Nome:</span> {{ selectedContact.name }}</p>
+        <p><span>Città:</span> {{ selectedContact.citta }}</p>
+        <p><span>GitHub:</span> <a href="https://github.com/{{ selectedContact.gitHub }}" target="_blank">{{
+            selectedContact.gitHub }}</a></p>
+        <p><span>Email:</span> <a href="mailto:{{ selectedContact.email }}">{{ selectedContact.email }}</a></p>
+      </div>
     </div>
   </div>
-  
+</section>
