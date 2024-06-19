@@ -10,3 +10,9 @@
     height: 50px;
     margin: 5px;
 }
+.available{
+    background-color: green;
+}
+.booked{
+    background-color: red;
+}
