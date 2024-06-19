@@ -36,7 +36,7 @@
   
   .room-list {
     display: grid; /* Utilizza CSS Grid per la disposizione */
-    grid-template-columns: repeat(5, 1fr); /* Griglia a 3 colonne */
+    grid-template-columns: repeat(2, 1fr); /* Griglia a 3 colonne */
     gap: 10px; /* Spazio tra gli elementi della griglia */
     list-style: none; /* Rimuove i puntini dalla lista */
     padding: 0; /* Rimuove il padding predefinito */
