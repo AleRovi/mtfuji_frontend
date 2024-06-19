@@ -37,4 +37,8 @@ export class HeaderComponent {
     console.log("booking");
     this.router.navigate(['/booking']);
   }
+
+  navigateToRoom(){
+    this.router.navigate(['/room']);
+  }
 }
