@@ -2,12 +2,14 @@
 <div class="menus-container">
   <section class="menu">
     <h2>Snacks:</h2>
+    <div class="prova">
     @for (s of menu.snacks; track s.id){
     <li id="name">
       {{ s.name }}
       <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image" />
     </li>
     }
+  </div>
   </section>
 
   <section class="menu">

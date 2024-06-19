@@ -1,18 +1,18 @@
 @if(generalMenu){
-    <section id="standardMenu">
-        <p class="title">STANDARD MENU</p>
-        <app-menu-card [menu] = "generalMenu.standardMenu"></app-menu-card>
+<section class="pasticcio">
+    <section class="ciccio">
+        <section class="section" id="standardMenu">
+            <p class="title">STANDARD MENU</p>
+            <app-menu-card [menu]="generalMenu.standardMenu"></app-menu-card>
+        </section>
+        <section class="section" id="celiacMenu">
+            <p class="title">CELIAC MENU</p>
+            <app-menu-card [menu]="generalMenu.celiacMenu"></app-menu-card>
+        </section>
+        <section class="section" id="veganMenu">
+            <p class="title">VEGAN MENU</p>
+            <app-menu-card [menu]="generalMenu.veganMenu"></app-menu-card>
+        </section>
     </section>
-    <section id="celiacMenu">
-        <p class="title">CELIAC MENU</p>
-        <app-menu-card [menu] = "generalMenu.celiacMenu"></app-menu-card>
-    </section>
-    <section id="veganMenu">
-        <p class="title">VEGAN MENU</p>
-        <app-menu-card [menu] = "generalMenu.veganMenu"></app-menu-card>
-    </section>
+</section>
 }
-
-
-
-

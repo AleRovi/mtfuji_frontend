@@ -1,10 +1,4 @@
 /* Stile base per la pagina */
-body {
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-  }
-  
  .menu{
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
@@ -33,13 +27,6 @@ body {
 
 li:last-child {
   border-bottom: none;
-}
-
-h3 {
-  font-weight: bold;
-  margin: 500px 0;
-  color: #ef6c00;
-  font-size: 1.2em;
 }
 
 img{
@@ -79,7 +66,7 @@ li a:hover {
   font-weight: bold;
   font-size: 2.5em; /* Aumenta la dimensione del testo */
   color: white; /* Colore del testo */
-  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sfondo con gradiente */
+  background: linear-gradient(135deg, #DF0024, #F3C300, #00AC9F, #2E6DB4); /* Sfondo con gradiente */
   padding: 20px; /* Aggiunge spazio interno */
   border-radius: 15px; /* Bordo arrotondato */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombra al testo */
