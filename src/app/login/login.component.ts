@@ -24,8 +24,7 @@ export class LoginComponent {
       next: (response) => {
         localStorage.setItem('token', response.token);
         localStorage.setItem('userEmail', ngForm.value.email);
-        alert('Login effettuata');
-        this.router.navigate(['/booking'])
+          this.router.navigate(['/booking'])
       },
       error: err => {
         console.log(err); 

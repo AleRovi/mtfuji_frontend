@@ -1,15 +1,15 @@
 <div class="login-container">
-    <form #registerForm = "ngForm" (ngSubmit)="onSubmit(registerForm)" #loginForm="ngForm">
+    <form #loginForm = "ngForm" (ngSubmit)="onSubmit(loginForm)" >
       <h2>Login</h2>
       
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" required [(ngModel)]="email" name="email" #email="ngModel">
+        <input type="email" placeholder="Inserisci email" id="email"  name="email" required ngModel>
       </div>
   
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password" required [(ngModel)]="password" name="password" #password="ngModel">
+        <input type="password" placeholder="Inserisci password" id = "password" name="password" required ngModel>
       </div>
   
       <button type="submit" [disabled]="loginForm.invalid">Login</button>
