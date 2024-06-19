@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-export interface Room{
-
-    imageName: any;
-    id: number;
-    name: string;
-    maxOccupancy: number;
-    luxury: boolean;
-=======
 export interface Room {
+    imageName : string;
     id : number;
     name : string;
     maxOccupancy : number;
     luxury : boolean;
     cost : number;
->>>>>>> christian_soru
 }
