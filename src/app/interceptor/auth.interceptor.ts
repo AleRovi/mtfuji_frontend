@@ -7,6 +7,9 @@ import { Observable } from "rxjs";
 })
 
 export class AuthInterceptor implements HttpInterceptor{
+    isLoggedIn() {
+      
+    }
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         try{
             const token = localStorage.getItem("token");

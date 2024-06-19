@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
