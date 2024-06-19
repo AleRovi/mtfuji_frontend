@@ -20,6 +20,6 @@ export const routes: Routes = [
     { path: "karaoke", component: KaraokeComponent },
     { path: "karaoke/:search", component: KaraokeComponent },
     { path: "booking", component: BookingComponent },
-    { path: "contact", component: ContactComponent }
+    { path: "contact", component: ContactComponent },
     { path: "room", component: RoomComponent },
 ];
