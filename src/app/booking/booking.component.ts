@@ -1,51 +1,59 @@
 
-// app.component.ts
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+
+
+import { AuthInterceptor } from '../interceptor/auth.interceptor';
+import { RoomService } from '../service/room.service';
+import { Room } from '../model/room';
+import { BookingService } from '../service/booking.service';
+import { FormsModule, NgForm } from '@angular/forms';
+import { RoomAvailabilityComponent } from '../room-availability/room-availability.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [FormsModule, RoomAvailabilityComponent],
   templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.css']
+  styleUrls: ['./booking.component.css'],
 })
 export class BookingComponent {
+
   isLoggedIn = true; // Simulating logged in status
 
-  filmRooms = [
-    { name: 'Stanza Film Piccola 1', type: 'Piccola', cost: 30 },
-    { name: 'Stanza Film Piccola 2', type: 'Piccola', cost: 30 },
-    { name: 'Stanza Film Piccola 3', type: 'Piccola', cost: 30 },
-    { name: 'Stanza Film Grande 1', type: 'Grande', cost: 60 },
-    { name: 'Stanza Film Grande 2', type: 'Grande', cost: 60 },
-    { name: 'Stanza Film Grande 3', type: 'Grande', cost: 60 },
-  ];
-
-  karaokeRooms = [
-    { name: 'Stanza Karaoke 1', cost: 30 },
-    { name: 'Stanza Karaoke 2', cost: 30 },
-    { name: 'Stanza Karaoke 3', cost: 30 },
-    { name: 'Stanza Karaoke 4', cost: 30 },
-    { name: 'Stanza Karaoke 5', cost: 30 },
-    { name: 'Stanza Karaoke 6', cost: 30 },
-  ];
-
-  selectedRoom: any;
+  selectedRoom: Room | null = null;
   booking = {
     date: '',
     time: '',
     hours: 1
   };
 
-  selectRoom(room: any) {
-    this.selectedRoom = room;
+  rooms: any[] = [];
+
+  constructor(private authService: AuthInterceptor, private roomService: RoomService, private bookingService : BookingService) {}
+
+  ngOnInit(): void {
+    this.loadRooms();
+  }
+
+  loadRooms(): void {
+    this.roomService.getRooms().subscribe(rooms => {
+      this.rooms = rooms;
+      console.log(rooms);
+    });
+  }
+
+  selectRoom(room: Room) {
+    this.selectedRoom = room; 
   }
 
   bookRoom() {
-    if (this.isLoggedIn) {
-      const totalCost = this.selectedRoom.cost * this.booking.hours;
-      alert(`Prenotazione effettuata per ${this.selectedRoom.name} per un totale di €${totalCost}`);
-      // Logic to handle the booking can be added here
-    } else {
-      alert('Devi essere loggato per prenotare una stanza.');
-    }
+    
+  }
+
+  showAvailability(roomId : number, form : NgForm) {
+    this.bookingService.getBookingsForRoom(form.value.date, roomId).subscribe({
+      next: (bks) => console.log(bks),
+      error: (err) => console.log(err)
+    });
   }
 }
