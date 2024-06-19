@@ -64,7 +64,7 @@
   }
 
   .name{
-    font-size: 20px; /* Dimensione del carattere */
+    font-size: 16px; /* Dimensione del carattere */
     color: #000000; /* Colore del testo */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */
     display: flex;

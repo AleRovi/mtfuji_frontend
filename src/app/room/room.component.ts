@@ -16,7 +16,7 @@ export class RoomComponent implements OnInit{
   constructor(private roomService : RoomService){}
 
   ngOnInit(): void {
-    this.roomService.getAllRooms().subscribe({
+    this.roomService.getRooms().subscribe({
       next: (roomObject) => {
         this.room = Object.values(roomObject);
       },
