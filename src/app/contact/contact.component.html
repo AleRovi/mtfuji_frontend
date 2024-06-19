@@ -1,35 +1,3 @@
-<!-- <div>
-    <h2>Contatti</h2>
-    <ul>
-      <li *ngFor="let contact of contacts" (click)="selectContact(contact)">
-        {{ contact.name }} - {{ contact.address }}
-      </li>
-    </ul>
-  </div> 
-  
-  <div>
-    <agm-map [latitude]="selectedContact?.latitude" [longitude]="selectedContact?.longitude" [zoom]="15" *ngIf="selectedContact">
-      <agm-marker [latitude]="selectedContact?.latitude" [longitude]="selectedContact?.longitude"></agm-marker>
-    </agm-map>
-  </div> -->
-<!-- 
-  <div>
-    <h2>Contatti</h2>
-    <ul>
-      <li *ngFor="let contact of contacts" (click)="selectContact(contact)">
-        {{ contact.name }} - {{ contact.email }}
-      </li>
-    </ul>
-  </div>
-  
-  <div *ngIf="selectedContact">
-    <h3>Dettagli del Contatto</h3>
-    <p>Nome: {{ selectedContact.name }}</p>
-    <p>Città: {{ selectedContact.citta }}</p>
-    <p>Github: {{ selectedContact.gitHub }}</p>
-    <p>Email: {{ selectedContact.email }}</p>
-  </div> -->
-
   <div class="container">
     <h2>Contatti</h2>
     <ul>
@@ -46,37 +14,4 @@
       <p><span>Email:</span> <a href="mailto:{{ selectedContact.email }}">{{ selectedContact.email }}</a></p>
     </div>
   </div>
-  <!-- <div *ngIf="selectedContact" id="map" class="map-container"></div>
-  <div>
-    <h2>Aggiungi Contatto</h2>
-    <form (ngSubmit)="addContact()" #contactForm="ngForm">
-      <div>
-        <label for="name">Nome:</label>
-        <input type="text" id="name" required [(ngModel)]="newContact.name" name="name">
-      </div>
-      <div>
-        <label for="address">Indirizzo:</label>
-        <input type="text" id="address" required [(ngModel)]="newContact.address" name="address">
-      </div>
-      <div>
-        <label for="latitude">Latitudine:</label>
-        <input type="number" id="latitude" required [(ngModel)]="newContact.latitude" name="latitude">
-      </div>
-      <div>
-        <label for="longitude">Longitudine:</label>
-        <input type="number" id="longitude" required [(ngModel)]="newContact.longitude" name="longitude">
-      </div>
-      <button type="submit">Aggiungi Contatto</button>
-    </form>
-  </div>
   
-  <div>
-    <h2>Contatti</h2>
-    <ul>
-       <li *ngFor="let contact of contacts" (click)="selectContact(contact)">
-        {{ contact.name }} - {{ contact.address }}
-      </li> 
-    </ul>
-  </div>
-  
-  <div *ngIf="selectedContact" id="map" class="map-container"></div> --> 
