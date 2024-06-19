@@ -1,11 +1,9 @@
-<div>
+<div class="bottone">
   <label for="searchByTitleOrSinger">CERCA</label>
-  <form #search = "ngForm" (ngSubmit)="onSubmit(search)">
+  <form #search="ngForm" (ngSubmit)="onSubmit(search)">
     <input type="text" placeholder="Inserisci il titolo che vuoi cercare" name="searchByTitleOrSinger" required ngModel>
     <button type="submit" class="btn">cerca</button>
   </form>
-  
-  
 </div>
 
 <div class="menus-container">
