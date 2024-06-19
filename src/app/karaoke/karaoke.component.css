@@ -66,3 +66,47 @@
     justify-content: center;
     font-weight: bold;
   }
+
+
+  /* botton */
+  .bottone {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px; /* Larghezza del form */
+    text-align: center; /* Centra il contenuto */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; /* Larghezza desiderata del form */
+  }
+  
+  label {
+    font-size: 1.2rem; /* Dimensione del font della label */
+    margin-bottom: 10px; /* Spazio inferiore tra la label e l'input */
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 100%; /* Larghezza al 100% del contenitore */
+    box-sizing: border-box; /* Considera il padding nell'ampiezza */
+  }
+  
+  button.btn {
+    padding: 10px 20px; /* Padding interno */
+    background-color: #007bff; /* Colore di sfondo */
+    color: #fff; /* Colore del testo */
+    border: none; /* Senza bordo */
+    cursor: pointer; /* Cambia il cursore al passaggio */
+    transition: background-color 0.3s ease; /* Transizione animata */
+  }
+  
+  button.btn:hover {
+    background-color: #0056b3; /* Colore di sfondo al passaggio */
+  }
+  
