@@ -5,8 +5,8 @@
     <section class="food">
       @for (s of menu.snacks; track s.id){
       <li>
-        <div class="name">{{ s.name }}</div>
-        <div class="product-image"><img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" /></div>
+        <p class="name">{{ s.name }}</p>
+        <p class="product-image"><img id="img" [src]="getImagePath(s)" alt="{{ s.name }}"  /></p>
       </li>
       }
     </section>
@@ -18,7 +18,7 @@
       @for (s of menu.sandwiches; track s.id){
       <li>
         <p class="name">{{ s.name }}</p>
-        <p><img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image" /></p>
+        <p class="product-image"><img id="img" [src]="getImagePath(s)" alt="{{ s.name }}"  /></p>
       </li>
       }
     </div>
@@ -30,7 +30,7 @@
       @for (f of menu.friedFoods; track f.id){
       <li>
         <p class="name">{{ f.name }}</p>
-        <img id="img" [src]="getImagePath(f)" alt="{{ f.name }}" class="product-image" />
+        <p class="product-image"><img id="img" [src]="getImagePath(f)" alt="{{ f.name }}" title="{{f.description}}"/></p>
       </li>
       }
     </div>
@@ -42,7 +42,7 @@
       @for (s of menu.salads; track s.id){
       <li id="name">
         <p class="name">{{ s.name }}</p>
-        <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image" />
+        <p class="product-image" ><img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" /></p>
       </li>
       }
     </div>
@@ -54,7 +54,7 @@
       @for (d of menu.desserts; track d.id){
       <li id="name">
         <p class="name">{{ d.name }}</p>
-        <img id="img" [src]="getImagePath(d)" alt="{{ d.name }}" class="product-image" />
+        <p class="product-image"><img id="img" [src]="getImagePath(d)" alt="{{ d.name }}"  /></p>
       </li>
       }
     </div>
@@ -66,7 +66,7 @@
       @for (s of menu.specialFoods; track s.id){
       <li id="name">
         <p class="name">{{ s.name }}</p>
-        <img id="img" [src]="getImagePath(s)" alt="{{ s.name }}" class="product-image" />
+        <p class="product-image"><img id="img" [src]="getImagePath(s)" alt="{{ s.name }}"/></p>
       </li>
       }
     </div>
