@@ -15,4 +15,8 @@ export class KaraokeService {
   getSongs(): Observable<Karaoke> {
     return this.http.get<Karaoke>(this.apiUrl);
   }
+
+  searchTitleOrSinger(searchTerm: string): Observable<Karaoke>{
+    return this.http.get<Karaoke>(`${this.apiUrl}/${searchTerm}`);
+  }
 }

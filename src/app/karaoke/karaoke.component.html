@@ -1,11 +1,21 @@
+<div>
+  <label for="searchByTitleOrSinger">CERCA</label>
+  <form #search = "ngForm" (ngSubmit)="onSubmit(search)">
+    <input type="text" placeholder="Inserisci il titolo che vuoi cercare" name="searchByTitleOrSinger" required ngModel>
+    <button type="submit" class="btn">cerca</button>
+  </form>
+  
+  
+</div>
+
 <div class="menus-container">
   <section class="menu">
     <p class="title">ALCUNE DELLE CANZONI DISPONIBILI AL KARAOKE</p>
     <ul class="karaoke-list">
       @for (s of songs; track s.id) {
       <li id="name" class="karaoke">
-          ARTISTA: {{s.singer}}
-          <br>TITOLO: {{ s.title }}
+        ARTISTA: {{s.singer}}
+        <br>TITOLO: {{ s.title }}
       </li>
       }
     </ul>
