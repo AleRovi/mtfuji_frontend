@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class BookingService {
 
   private apiUrl = 'http://localhost:8080/booking';
+  private roomBookingUrl = 'http://localhost:8080/rooms';
 
   constructor(private http : HttpClient) { }
 
@@ -24,5 +25,10 @@ export class BookingService {
   deleteBooking(bookingId : number) : Observable<any>{
     const url = `${this.apiUrl}/${bookingId}`;
     return this.http.delete<Booking>(url);
+  }
+
+  getBookingsForRoom(day : Date, roomId : number){
+    const url = `${this.roomBookingUrl}/${roomId}/${day}/bookings`;
+    return this.http.get<Booking[]>(url);
   }
 }

@@ -1,47 +1,42 @@
 <!-- app.component.html -->
-@if (isLoggedIn) {
-<section>
-  <div class="container">
-    <h1>Servizio Prenotazioni Stanze</h1>
-
-    <h2>Stanze Film</h2>
-    <div class="rooms">
-      @for (room of filmRooms; track room.name) {
-      <div class="room" (click)="selectRoom(room)">
-        <h3>{{ room.name }}</h3>
-        <p>{{ room.type }} - €{{ room.cost }} all'ora</p>
+ @if (isLoggedIn) {
+  <section>
+    <div class="container">
+        <h1>Servizio Prenotazioni Stanze</h1>
+      
+        <h2>Stanze</h2>
+        <div class="rooms">
+            @for (room of rooms; track room.name) {
+                <div class="room" (click)="selectRoom(room)">
+                    <h3>{{ room.name }}</h3>
+                    <p>{{ room.type }} - €{{ room.cost }} all'ora</p>
+                  </div>
+            }
+        </div>
+        @if (selectedRoom) {
+            <div class="booking-form">
+                <h2>Prenotazione per {{ selectedRoom.name }}</h2>
+                <form #availabilityForm = "ngForm" (ngSubmit)="showAvailability(selectedRoom.id, availabilityForm)">
+                  <label for="date">Giorno di Check-in</label>
+                  <input type="date" id="date" name="date" required ngModel>
+                  <button type="submit">Vedi disponibilità</button>
+                  <!-- <label for="time">Ora di Check-in</label>
+                  <input type="time" id="time" name="time" required ngModel>
+            
+                  <label for="hours">Numero di Ore</label>
+                  <input type="number" id="hours" name="hours" required ngModel> -->
+            
+                  <!-- <button type="submit">Prenota</button> -->
+                </form>
+                <p>Totale: €{{ selectedRoom.cost * booking.hours }}</p>
+              </div>
+        }  
       </div>
-      }
-    </div>
-    <h2>Stanze Karaoke</h2>
-    <div class="rooms">
-      @for (room of karaokeRooms; track room.name) {
-      <div class="room" (click)="selectRoom(room)">
-        <h3>{{ room.name }}</h3>
-        <p>€{{ room.cost }} all'ora</p>
-      </div>
-      }
-    </div>
-    @if (selectedRoom) {
-    <div class="booking-form">
-      <h2>Prenotazione per {{ selectedRoom.name }}</h2>
-      <form (ngSubmit)="bookRoom()">
-        <label for="date">Giorno di Check-in</label>
-        <input type="date" id="date" name="date" required>
-
-        <label for="time">Ora di Check-in</label>
-        <input type="time" id="time" name="time" required>
-
-        <label for="hours">Numero di Ore</label>
-        <input type="number" id="hours" name="hours" required>
-
-        <button type="submit">Prenota</button>
-      </form>
-      <p>Totale: €{{ selectedRoom.cost * booking.hours }}</p>
-    </div>
-    }
-  </div>
-</section>
-} @else {
-<p>Devi essere loggato per prenotare una stanza.</p>
-}
+    </section>
+ } @else {
+    <p>Devi essere loggato per prenotare una stanza.</p>
+ }
+<app-room-availability></app-room-availability>
+  
+ 
+    
