@@ -1,0 +1,36 @@
+<!-- <div class="room-container">
+    <section class="room">
+        <h2>Stanze</h2>
+        <section class="small_room_list">
+            <h3>Stanze piccole</h3>
+            <section class="small_room">
+                <li>
+                    <div class="name">Nome di stanza piccola</div>
+                    <div class="product-image"><img id="img" alt="Immagine stanza"></div>
+                </li>
+            </section>
+        </section>
+        <section class="big_room_list">
+            <h3>Stanze grandi</h3>
+            <section class="big_room">
+                <li>
+                    <div class="name">Nome di stanza grande</div>
+                    <div class="product-image"><img id="img" alt="Immagine stanza"></div>
+                </li>
+            </section>
+        </section>
+    </section>
+</div> -->
+<div class="room-container">
+    <section class="room-overview">
+      <p class="title">LE NOSTRE STANZE</p>
+      <ul class="room-list">
+        @for (r of room; track r.id) {
+        <li>
+          <div class="room">{{ r.name }}</div>
+          <div class="room-image"><img id="img" [src]="getImagePath(r)" alt="{{ r.imageName }}"></div>
+        </li>
+        }
+      </ul>
+    </section>
+  </div>
