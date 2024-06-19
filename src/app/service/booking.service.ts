@@ -6,13 +6,23 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class KaraokeService {
+export class BookingService {
 
-  private apiUrl = 'http://localhost:8080/karaoke';
+  private apiUrl = 'http://localhost:8080/booking';
 
   constructor(private http : HttpClient) { }
 
-  getSongs(): Observable<Karaoke> {
-    return this.http.get<Karaoke>(this.apiUrl);
+  createBooking(booking : Booking) : Observable<any>{
+    return this.http.post<Booking>(this.apiUrl, booking);
+  }
+
+  updateBooking(booking : Booking, bookingId : number) : Observable<any>{
+    const url = `${this.apiUrl}/${bookingId}`;
+    return this.http.put<Booking>(url, booking);
+  }
+
+  deleteBooking(bookingId : number) : Observable<any>{
+    const url = `${this.apiUrl}/${bookingId}`;
+    return this.http.delete<Booking>(url);
   }
 }
