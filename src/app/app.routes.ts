@@ -7,14 +7,16 @@ import { FilmsComponent } from './films/films.component';
 import { LoginComponent } from './login/login.component';
 import { KaraokeComponent } from './karaoke/karaoke.component';
 import { BookingComponent } from './booking/booking.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
     { path: "", component: HomeComponent },
-    { path: "foods", component: MenuComponent,},
+    { path: "food", component: MenuComponent,},
     { path: "register", component: RegisterComponent },
-    { path: "beverages", component: MenuBeverageComponent },
-    { path: "films", component: FilmsComponent },
+    { path: "beverage", component: MenuBeverageComponent },
+    { path: "film", component: FilmsComponent },
     { path: "login", component: LoginComponent },
     { path: "karaoke", component: KaraokeComponent },
     { path: "booking", component: BookingComponent },
+    { path: "contact", component: ContactComponent }
 ];

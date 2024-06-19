@@ -6,6 +6,14 @@
   padding: 10px;
 }
 
+.food{
+  gap: 10px; /*spaziatura tra riga e colonna*/
+  display: grid; /* Imposta il layout Flexbox */
+  grid-template-columns: repeat(2, 1fr); /*creare una griglia, il primo valore è il num di col e il secondo è un un'utà di misura */
+  justify-content: space-around; /* Distribuisce lo spazio intorno ai menu */
+  padding: 10px;
+}
+
 .menu {
   background-color: #f8f8f8; /* Sfondo chiaro per il menu */
   border: 1px solid #dcdcdc; /* Bordo sottile */
@@ -16,7 +24,6 @@
   box-sizing: border-box; /* Include padding e bordo nella larghezza */
   overflow: hidden; /* Nasconde il contenuto che sporge */
 }
-  
   /* Stile per l'elemento li */
   li {
     padding: 15px 20px;
@@ -25,25 +32,14 @@
     background: #ffe0b2;
     border-radius: 8px;
     margin: 10px 0;
-    display: flex; /* Utilizzo di flexbox per allineare contenuti */
+    list-style: none;
     align-items: center; /* Allinea verticalmente */
   }
   
   li:last-child {
     border-bottom: none;
   }
-  
-  h3 {
-    font-weight: bold;
-    margin: 500px 0;
-    color: #ef6c00;
-    font-size: 1.2em;
-  }
-  
-  /* li:hover {
-      transform;
-  } */
-  
+
   li a {
     text-decoration: none;
     color: #e65100;
@@ -58,21 +54,34 @@
   .product-image {
     display: flex;
     width: auto;
-    height: 50px;
-    margin-right: 10px;
-    margin-left: 60px;
-    justify-content: right;
+    height: 150px;
+    margin: 0 auto;
+    justify-content: center;
   }
 
-  #name{
-    font-size: 16px; /* Dimensione del carattere */
-    color: #333; /* Colore del testo */
+  .name{
+    font-size: 20px; /* Dimensione del carattere */
+    color: #000000; /* Colore del testo */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+    display: flex;
+  justify-content: center;
+  font-weight: bold;
   }
-  .prova{
-    gap: 10px; /*spaziatura tra riga e colonna*/
-    display: grid; /* Imposta il layout Flexbox */
-    grid-template-columns: repeat(3, 1fr); /*creare una griglia, il primo valore è il num di col e il secondo è un un'utà di misura */
-    justify-content: space-around; /* Distribuisce lo spazio intorno ai menu */
-    padding: 10px;
+
+  .title {
+    text-align: center; /* Centra il testo del titolo */
+    width: 100%; /* Fa sì che il titolo prenda tutta la larghezza disponibile */
+    margin-bottom: 20px; /* Aggiunge spazio sotto il titolo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jakarta', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em; /* Aumenta la dimensione del testo */
+    color: white; /* Colore del testo */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sfondo con gradiente */
+    padding: 20px; /* Aggiunge spazio interno */
+    border-radius: 15px; /* Bordo arrotondato */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombra al testo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombra al testo */
   }

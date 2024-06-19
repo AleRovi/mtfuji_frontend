@@ -6,13 +6,13 @@
       <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
 
         <div class="form-group">
-          <label for="firstname">Firstname</label>
-          <input type="text" placeholder="Enter your firstname" id="firstname" name="firstname" required ngModel>
+          <label for="firstname">Nome</label>
+          <input type="text" placeholder="Inserisci il tuo nome" id="firstname" name="firstname" required ngModel>
         </div>
 
         <div class="form-group">
-          <label for="lastname">Lastname</label>
-          <input type="text" placeholder="Enter your lastname" id="lastname" name="lastname" required ngModel>
+          <label for="lastname">Cognome</label>
+          <input type="text" placeholder="Inserisci il tuo cognome" id="lastname" name="lastname" required ngModel>
         </div>
 
         <div class="form-group">
@@ -38,11 +38,8 @@
 
 
         <div class="form-group">
-          <span class="FC">Fidelity card</span>
-          <label for="fidelity_card" class="switch">
-            <input type="checkbox" id="fidelity_card" name="fidelity_card" required ngModel>
-            <span class="slider"></span>
-          </label>
+          <label for="fidelity_card">Fidelity card</label>
+          <input type="checkbox" id="fidelity_card" name="fidelity_card" required ngModel>
         </div>
 
         <button type="submit">Register</button>
