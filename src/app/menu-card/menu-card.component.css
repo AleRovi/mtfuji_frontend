@@ -50,14 +50,18 @@
   li a:hover {
     color: #ff6f00;
   }
-  
-  /* Stile per le immagini dei prodotti */
-  .product-image {
+
+  img {
     display: flex;
-    width: auto;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
     margin: 0 auto;
     justify-content: center;
+  }
+
+  .product-image{
+    display: flex;
+    max-width: 300px;
   }
 
   .name{
