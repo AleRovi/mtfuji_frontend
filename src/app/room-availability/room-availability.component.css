@@ -11,8 +11,8 @@
     margin: 5px;
 }
 .available{
-    background-color: green;
+    background-color: rgb(87, 244, 87);
 }
 .booked{
-    background-color: red;
+    background-color: rgb(255, 95, 95);
 }

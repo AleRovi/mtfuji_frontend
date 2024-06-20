@@ -8,7 +8,7 @@
       @for (room of rooms; track room.name) {
       <div class="room" (click)="selectRoom(room)">
         <h3>{{ room.name }}</h3>
-        <p>{{ room.type }} - €{{ room.cost }} all'ora</p>
+        <p>€{{ room.cost }} all'ora</p>
       </div>
       }
     </div>

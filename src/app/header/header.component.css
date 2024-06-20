@@ -9,6 +9,12 @@
     position: relative; /* Aggiungi questa linea */
 }
 
+.logo {
+    float: left; /* Per posizionarlo a sinistra dell'h1 */
+    margin-right: 20px; /* Aggiungo un margine per separare il logo dall'h1 */
+    border-radius: 100px;
+}
+
 section{
     color: white;
     display: flex;
