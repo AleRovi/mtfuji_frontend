@@ -1,15 +1,15 @@
 @if(generalMenu){
-<section class="pasticcio">
-    <section class="ciccio">
-        <section class="section" id="standardMenu">
+<section class="maxContainer">
+    <section class="middleContainer">
+        <section id="standardMenu" class="section">
             <p class="title">STANDARD MENU</p>
             <app-menu-card [menu]="generalMenu.standardMenu"></app-menu-card>
         </section>
-        <section class="section" id="celiacMenu">
-            <p class="title">MENU CILIACO</p>
+        <section id="celiacMenu" class="section">
+            <p class="title">MENU CELIACO</p>
             <app-menu-card [menu]="generalMenu.celiacMenu"></app-menu-card>
         </section>
-        <section class="section" id="veganMenu">
+        <section id="veganMenu" class="section">
             <p class="title">MENU VEGANO</p>
             <app-menu-card [menu]="generalMenu.veganMenu"></app-menu-card>
         </section>

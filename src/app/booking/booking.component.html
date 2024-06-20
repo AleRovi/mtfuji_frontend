@@ -36,7 +36,10 @@
  } @else {
     <p>Devi essere loggato per prenotare una stanza.</p>
  }
-<app-room-availability></app-room-availability>
+ @if(showReservations){
+  <app-room-availability [bookings]="bookings" [reservationDate]="selectedDate"></app-room-availability>
+ }
+
   
  
     

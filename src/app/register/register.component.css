@@ -4,15 +4,14 @@ section{
   justify-content: center;
   align-items: center;
   background: #262626;
-  min-height: 100vh;
   overflow: hidden;
 }
 .register-container {
-    max-width: 400px;
+    max-width: 50%;
     margin: auto;
-    padding: 20px;
+    padding: 80px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 2px;
     overflow: hidden;
     background: linear-gradient(
       180deg,
@@ -48,18 +47,13 @@ section{
   input[type="text"],
   input[type="email"],
   input[type="password"],
-  input[type="number"] {
+  input[type="number"]  {
     width: 100%;
     padding: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
     backdrop-filter: blur(30px);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.28) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
     box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
     0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(30px);
@@ -72,6 +66,11 @@ section{
     width: 3.5em;
     height: 2em;
     
+  }
+
+  .maxContainer{
+    z-index: 10;
+    width: 100%;
   }
   
   /* Hide default HTML checkbox */
@@ -138,4 +137,4 @@ section{
   button:active {
     transform: translateY(2px) translateX(1px);
     box-shadow: 0 0 0 0 black;
-  };
+  }

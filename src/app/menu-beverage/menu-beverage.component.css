@@ -1,39 +1,51 @@
-/* Stile base per la pagina */
- .menu{
+.maxContainer {
+  background-color: #333;
+  z-index: 10;
+}
+
+.middleContainer{
+  background-color: #333;
+}
+
+.menu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   justify-content: space-around;
-  background-color: #f8f8f8; /* Sfondo chiaro per il menu */
-  border: 1px solid #dcdcdc; /* Bordo sottile */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
-  border-radius: 10px; /* Angoli arrotondati */
-  padding: 10px; /* Spazio interno */
-  margin: 10px; /* Spazio esterno */
-  box-sizing: border-box; /* Include padding e bordo nella larghezza */
-  overflow: hidden; /* Nasconde il contenuto che sporge */
- }
+  background-color: #f8f8f8;
+  /* Sfondo chiaro per il menu */
+  border: 1px solid #dcdcdc;
+  /* Bordo sottile */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
- li{
+li {
   list-style-type: none;
-  padding: 15px ;
+  padding: 15px;
   border-bottom: 1px solid #ffa726;
   transition: background 0.3s ease;
   background: #ffe0b2;
   border-radius: 8px;
   margin: 10px 0;
-  align-items: center; /* Allinea verticalmente */
+  align-items: center;
+  /* Allinea verticalmente */
 }
 
 li:last-child {
   border-bottom: none;
 }
 
-img{
+img {
   width: auto;
   height: 200px;
   display: block;
-    margin: 0 auto; /* Centra l'immagine */
+  margin: 0 auto;
+  /* Centra l'immagine */
 }
 
 li a {
@@ -46,19 +58,25 @@ li a:hover {
   color: #ff6f00;
 }
 
-#name{
-  font-size: 20px; /* Dimensione del carattere */
-  color: #333; /* Colore del testo */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+#name {
+  font-size: 20px;
+  /* Dimensione del carattere */
+  color: #333;
+  /* Colore del testo */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  /* Ombra leggera */
   display: flex;
   justify-content: center;
   font-weight: bold;
 }
 
 .title {
-  text-align: center; /* Centra il testo del titolo */
-  width: 100%; /* Fa sì che il titolo prenda tutta la larghezza disponibile */
-  margin-bottom: 20px; /* Aggiunge spazio sotto il titolo */
+  text-align: center;
+  /* Centra il testo del titolo */
+  width: 100%;
+  /* Fa sì che il titolo prenda tutta la larghezza disponibile */
+  margin-bottom: 20px;
+  /* Aggiunge spazio sotto il titolo */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +94,7 @@ li a:hover {
 section {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   padding: 15px;
 }

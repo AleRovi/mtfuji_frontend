@@ -2,8 +2,8 @@ export interface Booking{
     id?: number;
     userId: number;
     quantity: number;
-    checkIn: string;
-    checkOut: string;
+    check_in: string;
+    check_out: string;
     reservationDate: string;
     roomId: number;
     paid: boolean;

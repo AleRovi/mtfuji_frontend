@@ -1,17 +1,8 @@
 <section class="container">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    @for (hour of hours; track $index) {
+        <div [ngClass] = "{'available': hour.available, 'booked': !hour.available}"
+        (click)="handleClick(hour.time, hour.available)">
+            {{ hour.time | date: 'shortTime'}}
+        </div>
+    }
 </section>

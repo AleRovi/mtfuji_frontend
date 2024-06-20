@@ -1,19 +1,16 @@
 section {
   position: relative;
   display: flex;
-/*   justify-content: center; */
-  /* align-items: center; */
   background: #262626;
-/*   min-height: 100vh; */
   overflow: hidden;
 }
 
 .login-container {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
+  width: 50%;
+  margin:  auto;
+  padding: 80px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 2px;
   overflow: hidden;
   background: linear-gradient(
     180deg,
@@ -35,6 +32,7 @@ h2 {
 .form-group {
   color: white;
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .form-group label {
@@ -43,13 +41,12 @@ h2 {
 }
 
 .form-group input {
-  width: calc(100% - 20px);
-  padding: 8px;
-  margin: 0 auto;
-  display: block;
+  width: 100%;
+  padding: 2%;
+  margin: auto;
+  display: flex;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 .error {
@@ -82,9 +79,9 @@ button:disabled {
 button:hover {
   transform: translateY(-4px) translateX(-2px);
   box-shadow: 2px 5px 0 0 black;
-};
+}
 
 button:active {
   transform: translateY(2px) translateX(1px);
   box-shadow: 0 0 0 0 black;
-};
+}
