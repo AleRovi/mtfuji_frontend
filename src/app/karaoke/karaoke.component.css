@@ -1,11 +1,11 @@
 .maxContainer {
   position: relative;
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: #262626;
-  min-height: 100vh;
   overflow: hidden;
+  margin: 20px;
 }
 
 .middleContainer {
@@ -178,7 +178,9 @@ label {
   /* Dimensione del font della label */
   margin-bottom: 10px;
   /* Spazio inferiore tra la label e l'input */
-  
+  color: #feffff;
+  font-weight: bold;
+
 }
 
 input[type="text"] {

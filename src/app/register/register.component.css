@@ -5,6 +5,7 @@ section{
   align-items: center;
   background: #262626;
   overflow: hidden;
+  margin-top: 20px;
 }
 .register-container {
     max-width: 50%;

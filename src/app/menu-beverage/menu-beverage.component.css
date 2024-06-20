@@ -2,9 +2,8 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
   background: #262626;
-  min-height: 100vh;
+  margin-top: 20px;
   overflow: hidden;
   
 }
