@@ -27,7 +27,7 @@
       <ul class="room-list">
         @for (r of room; track r.id) {
         <li>
-          <div class="room">{{ r.name }}</div>
+          <div class="room"><!-- {{ r.name }} -->room 1</div>
           <div class="room-image"><img id="img" [src]="getImagePath(r)" alt="{{ r.imageName }}"></div>
         </li>
         }

@@ -47,28 +47,5 @@ export class RoomAvailabilityComponent implements OnInit{
       alert("Non puoi prenotare un'ora già riservata!");
     }
   }
-
-  // bookings2 : Booking[] =  [
-  // { id: 1,
-  //   userId: 2,
-  //   quantity: 5,
-  //   checkIn: "2024-06-20T16:00",
-  //   checkOut: "2024-06-20T18:00",
-  //   reservationDate: "2024-06-26",
-  //   roomId: 4,
-  //   paid: true,
-  //   cost: 20,
-  //   isPromotion: false},
-  // { id: 2,
-  //   userId: 3,
-  //   quantity: 5,
-  //   checkIn: "2024-06-20T13:00",
-  //   checkOut: "2024-06-20T14:00",
-  //   reservationDate: "2024-06-27",
-  //   roomId: 5,
-  //   paid: false,
-  //   cost: 20,
-  //   isPromotion: false}
-  // ];
 }
 

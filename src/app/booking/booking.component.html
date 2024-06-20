@@ -3,7 +3,6 @@
   <section>
     <div class="container">
         <h1>Servizio Prenotazioni Stanze</h1>
-      
         <h2>Stanze</h2>
         <div class="rooms">
             @for (room of rooms; track room.name) {
@@ -20,13 +19,6 @@
                   <label for="date">Giorno di Check-in</label>
                   <input type="date" id="date" name="date" required ngModel>
                   <button type="submit">Vedi disponibilità</button>
-                  <!-- <label for="time">Ora di Check-in</label>
-                  <input type="time" id="time" name="time" required ngModel>
-            
-                  <label for="hours">Numero di Ore</label>
-                  <input type="number" id="hours" name="hours" required ngModel> -->
-            
-                  <!-- <button type="submit">Prenota</button> -->
                 </form>
                 <p>Totale: €{{ selectedRoom.cost * booking.hours }}</p>
               </div>
