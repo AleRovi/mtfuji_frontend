@@ -1,60 +1,112 @@
+.maxContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #262626;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.middleContainer {
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
 .menus-container {
   display: flex;
-  justify-content: center; /* Centra il contenitore principale */
+  justify-content: center;
+  /* Centra il contenitore principale */
   padding: 10px;
 }
 
 .title {
-  text-align: center; /* Centra il testo del titolo */
-  width: 100%; /* Fa sì che il titolo prenda tutta la larghezza disponibile */
-  margin-bottom: 20px; /* Aggiunge spazio sotto il titolo */
+  text-align: center;
+  /* Centra il testo del titolo */
+  width: 100%;
+  /* Fa sì che il titolo prenda tutta la larghezza disponibile */
+  margin-bottom: 20px;
+  /* Aggiunge spazio sotto il titolo */
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Jakarta', sans-serif;
   font-weight: bold;
-  font-size: 2.5em; /* Aumenta la dimensione del testo */
-  color: white; /* Colore del testo */
-  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sfondo con gradiente */
-  padding: 20px; /* Aggiunge spazio interno */
-  border-radius: 15px; /* Bordo arrotondato */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombra al testo */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombra al testo */
+  font-size: 2.5em;
+  /* Aumenta la dimensione del testo */
+  color: white;
+  /* Colore del testo */
+  background: linear-gradient(135deg, #DF0024, #F3C300, #00AC9F, #2E6DB4);
+  padding: 20px;
+  /* Aggiunge spazio interno */
+  border-radius: 15px;
+  /* Bordo arrotondato */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Ombra al testo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* Ombra al testo */
 }
 
 
 .menu {
-  background-color: #f8f8f8; /* Sfondo chiaro per il menu */
-  border: 1px solid #dcdcdc; /* Bordo sottile */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
-  border-radius: 10px; /* Angoli arrotondati */
-  padding: 20px; /* Spazio interno */
-  margin: 10px; /* Spazio esterno */
-  box-sizing: border-box; /* Include padding e bordo nella larghezza */
-  overflow: hidden; /* Nasconde il contenuto che sporge */
+  /* Sfondo chiaro per il menu */
+  border: 1px solid #dcdcdc;
+  /* Bordo sottile */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Ombra leggera per profondità */
+  border-radius: 10px;
+  /* Angoli arrotondati */
+  padding: 20px;
+  /* Spazio interno */
+  margin: 10px;
+  /* Spazio esterno */
+  box-sizing: border-box;
+  /* Include padding e bordo nella larghezza */
+  overflow: hidden;
+  /* Nasconde il contenuto che sporge */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+  0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(30px);
+  z-index: 12;
 }
 
 .film-list {
-  display: grid; /* Utilizza CSS Grid per la disposizione */
-  grid-template-columns: repeat(5, 1fr); /* Griglia a 3 colonne */
-  gap: 10px; /* Spazio tra gli elementi della griglia */
-  list-style: none; /* Rimuove i puntini dalla lista */
-  padding: 0; /* Rimuove il padding predefinito */
-  margin: 0; /* Rimuove il margine predefinito */
+  display: grid;
+  /* Utilizza CSS Grid per la disposizione */
+  grid-template-columns: repeat(5, 1fr);
+  /* Griglia a 3 colonne */
+  gap: 10px;
+  /* Spazio tra gli elementi della griglia */
+  list-style: none;
+  /* Rimuove i puntini dalla lista */
+  padding: 0;
+  /* Rimuove il padding predefinito */
+  margin: 0;
+  /* Rimuove il margine predefinito */
 }
 
 .film {
   padding: 15px 20px;
-  border: 1px solid #ffa726; /* Cambiato da border-bottom a border per definire i bordi degli elementi della griglia */
+  border: 1px solid #ffa726;
+  /* Cambiato da border-bottom a border per definire i bordi degli elementi della griglia */
   transition: background 0.3s ease;
-  background: #ffe0b2;
+  background: linear-gradient(180deg, white, rgb(246, 191, 89), rgb(254, 89, 89));
   border-radius: 8px;
   margin: 10px 0;
   align-content: center;
-  
-  font-size: 26px; /* Dimensione del carattere */
-  color: #333; /* Colore del testo */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+
+  font-size: 26px;
+  /* Dimensione del carattere */
+  color: #333;
+  /* Colore del testo */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  /* Ombra leggera */
   display: flex;
   justify-content: center;
   font-weight: bold;
@@ -65,7 +117,7 @@
 }
 
 .product-image {
-  display:flex;
+  display: flex;
   width: auto;
   height: 470px;
   margin-right: 3px;

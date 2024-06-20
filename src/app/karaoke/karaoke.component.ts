@@ -44,7 +44,7 @@ export class KaraokeComponent implements OnInit {
           this.songs = [];
         }
       });
-      this.router.navigate([`karaoke/${form.value.searchByTitleOrSinger}`]);
+      //this.router.navigate([`karaoke/${form.value.searchByTitleOrSinger}`]);
     }
     
   }
