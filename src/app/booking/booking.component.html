@@ -35,7 +35,7 @@
     <p>Devi essere loggato per prenotare una stanza.</p>
  }
  @if(showReservations){
-  <app-room-availability [bookings]="bookings" [reservationDate]="selectedDate"></app-room-availability>
+  <app-room-availability [bookings]="bookings" [reservationDate]="selectedDate" (hourChosen) = "onHourChosen($event)"></app-room-availability>
  }
 
   
