@@ -47,15 +47,11 @@ export class BookingComponent {
 
   selectRoom(room: Room) {
     this.selectedRoom = room; 
-  }
-
-  bookRoom() {
-    
+    this.showReservations = false;
   }
 
   showAvailability(roomId : number, form : NgForm) {
     this.selectedDate = new Date(form.value.date);
-    console.log("selectedDate" + this.selectedDate);
     this.bookingService.getBookingsForRoom(form.value.date, roomId).subscribe({
       next: (bks) => {
         this.bookings = bks;
@@ -83,8 +79,21 @@ export class BookingComponent {
       roomId : this.selectedRoom!.id      
     };
     this.bookingService.createBooking(booking).subscribe({
-      next : b => console.log(b),
+      next : b => {
+        console.log(b);
+        this.loadBookings();
+      },
       error : e => console.log(e)
+    });
+  }
+  loadBookings() {
+    this.bookingService.getBookingsForRoom(this.formatLocalDate(this.selectedDate) as any, this.selectedRoom!.id).subscribe({
+      next: (bks) => {
+        this.bookings = bks;
+        console.log(bks);
+        this.showReservations = true;
+      },
+      error: (err) => console.log(err)
     });
   }
 

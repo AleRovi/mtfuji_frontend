@@ -11,10 +11,11 @@ import { CommonModule } from '@angular/common';
 })
 export class RoomAvailabilityComponent implements OnInit, OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("OnChanges", changes['reservationDate'].currentValue);
+    this.refreshGrid();
   }
+  
   @Input("bookings") bookings : Booking[] = [];
-  @Input("reservationDate") reservationDate : Date = new Date();
+  @Input("reservationDate") reservationDate : Date | null = null;
   @Output() hourChosen : EventEmitter<Date> = new EventEmitter<Date>();
   hours : {time : Date, available : boolean}[] = [];
   ngOnInit(): void {
@@ -28,6 +29,7 @@ export class RoomAvailabilityComponent implements OnInit, OnChanges{
       this.hours.push({time, available : this.isAvailable(time)});
     }
   }
+
   isAvailable(time : Date) : boolean {
     return !this.bookings.some(b => {
     const d = new Date(Date.parse(b.check_in));
@@ -35,6 +37,18 @@ export class RoomAvailabilityComponent implements OnInit, OnChanges{
     return d.getTime() == time.getTime();
     });
   }
+
+  refreshGrid(){
+    if(!this.hours || this.hours.length == 0){
+      return;
+    }
+    if(!this.reservationDate){
+      return;
+    }
+    this.hours = this.hours.map(h => { 
+      return {time: h.time,available : this.isAvailable(h.time)};
+      });
+    }
 
   handleClick(time : Date, available : boolean){
     if(available){
