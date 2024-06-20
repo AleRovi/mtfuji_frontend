@@ -1,112 +1,192 @@
+.maxContainer {
+  position: relative;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background: #262626;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.middleContainer {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .menus-container {
-    display: flex;
-    justify-content: center; /* Centra il contenitore principale */
-    padding: 10px;
-  }
-  
-  .title {
-    text-align: center; /* Centra il testo del titolo */
-    width: 100%; /* Fa sì che il titolo prenda tutta la larghezza disponibile */
-    margin-bottom: 20px; /* Aggiunge spazio sotto il titolo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Jakarta', sans-serif;
-    font-weight: bold;
-    font-size: 2.5em; /* Aumenta la dimensione del testo */
-    color: white; /* Colore del testo */
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sfondo con gradiente */
-    padding: 20px; /* Aggiunge spazio interno */
-    border-radius: 15px; /* Bordo arrotondato */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombra al testo */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombra al testo */
-  }
-  
-  
-  .menu {
-    background-color: #f8f8f8; /* Sfondo chiaro per il menu */
-    border: 1px solid #dcdcdc; /* Bordo sottile */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
-    border-radius: 10px; /* Angoli arrotondati */
-    padding: 20px; /* Spazio interno */
-    margin: 10px; /* Spazio esterno */
-    box-sizing: border-box; /* Include padding e bordo nella larghezza */
-    overflow: hidden; /* Nasconde il contenuto che sporge */
-  }
-  
-  .karaoke-list {
-    display: grid; /* Utilizza CSS Grid per la disposizione */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 10px; /* Spazio tra gli elementi della griglia */
-    list-style: none; /* Rimuove i puntini dalla lista */
-    padding: 0; /* Rimuove il padding predefinito */
-    margin: 0; /* Rimuove il margine predefinito */
-  }
-  
-  .karaoke {
-    padding: 15px 20px;
-    border: 1px solid #ffa726; /* Cambiato da border-bottom a border per definire i bordi degli elementi della griglia */
-    transition: background 0.3s ease;
-    background: #ffe0b2;
-    border-radius: 8px;
-    margin: 10px 0;
-    display: flex; /* Utilizzo di flexbox per allineare contenuti */
-    align-content: center;
-  }
-  
-  .karaoke:hover {
-    background: #ffcc80;
-  }
-  
-  #name {
-    font-size: 22px; /* Dimensione del carattere */
-    color: #333; /* Colore del testo */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra leggera */
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-  }
+  display: flex;
+  justify-content: center;
+  /* Centra il contenitore principale */
+  padding: 10px;
+}
+
+.title {
+  text-align: center;
+  /* Centra il testo del titolo */
+  width: 100%;
+  /* Fa sì che il titolo prenda tutta la larghezza disponibile */
+  margin-bottom: 20px;
+  /* Aggiunge spazio sotto il titolo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Jakarta', sans-serif;
+  font-weight: bold;
+  font-size: 2.5em;
+  /* Aumenta la dimensione del testo */
+  color: white;
+  /* Colore del testo */
+  background: linear-gradient(135deg, #DF0024, #F3C300, #00AC9F, #2E6DB4);
+  padding: 20px;
+  /* Aggiunge spazio interno */
+  border-radius: 15px;
+  /* Bordo arrotondato */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Ombra al testo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* Ombra al testo */
+}
 
 
-  /* botton */
-  .bottone {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 300px; /* Larghezza del form */
-    text-align: center; /* Centra il contenuto */
-  }
+.menu {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.28) 0%,
+      rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+  border: 1px solid #dcdcdc;
+  /* Bordo sottile */
+  border-radius: 10px;
+  /* Angoli arrotondati */
+  padding: 20px;
+  /* Spazio interno */
+  margin: 10px;
+  /* Spazio esterno */
+  box-sizing: border-box;
+  /* Include padding e bordo nella larghezza */
+  overflow: hidden;
+  /* Nasconde il contenuto che sporge */
+  backdrop-filter: blur(30px);
+  z-index: 10;
+}
+
+.karaoke-list {
+  display: grid;
+  /* Utilizza CSS Grid per la disposizione */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  /* Spazio tra gli elementi della griglia */
+  list-style: none;
+  /* Rimuove i puntini dalla lista */
+  padding: 0;
+  /* Rimuove il padding predefinito */
+  margin: 0;
+  /* Rimuove il margine predefinito */
+}
+
+.karaoke {
+  padding: 15px 20px;
+  border: 1px solid #ffa726;
+  /* Cambiato da border-bottom a border per definire i bordi degli elementi della griglia */
+  transition: background 0.3s ease;
+  background: linear-gradient(180deg, white, rgb(246, 191, 89), rgb(254, 89, 89));
+  border-radius: 8px;
+  margin: 10px 0;
+  display: flex;
+  /* Utilizzo di flexbox per allineare contenuti */
+  align-content: center;
+}
+
+.karaoke:hover {
+  background: #ffcc80;
+}
+
+#name {
+  font-size: 22px;
+  /* Dimensione del carattere */
+  color: #333;
+  /* Colore del testo */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  /* Ombra leggera */
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* botton */
+
+.bottone {
+  border-radius: 8px;
+  padding: 20px;
+  width: 25%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(30px);
+  z-index: 12;
+  margin: 10px auto; /* Center horizontally and add some vertical space */
+}
+
+button {
+  background-color: #2E6DB4;
+  color: black;
+  font-weight: 600;
+  padding: 15px 30px;
+  text-decoration: none;
+  align-items: center;
+  font-size: 1.2em;
+  border-radius: 50px;
+  margin: 10px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+.form {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  /* Larghezza desiderata del form */
+}
+
+label {
+  font-size: 1.2rem;
+  /* Dimensione del font della label */
+  margin-bottom: 10px;
+  /* Spazio inferiore tra la label e l'input */
   
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px; /* Larghezza desiderata del form */
-  }
-  
-  label {
-    font-size: 1.2rem; /* Dimensione del font della label */
-    margin-bottom: 10px; /* Spazio inferiore tra la label e l'input */
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    width: 100%; /* Larghezza al 100% del contenitore */
-    box-sizing: border-box; /* Considera il padding nell'ampiezza */
-  }
-  
-  button.btn {
-    padding: 10px 20px; /* Padding interno */
-    background-color: #007bff; /* Colore di sfondo */
-    color: #fff; /* Colore del testo */
-    border: none; /* Senza bordo */
-    cursor: pointer; /* Cambia il cursore al passaggio */
-    transition: background-color 0.3s ease; /* Transizione animata */
-  }
-  
-  button.btn:hover {
-    background-color: #0056b3; /* Colore di sfondo al passaggio */
-  }
-  
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* Larghezza al 100% del contenitore */
+  box-sizing: border-box;
+  /* Considera il padding nell'ampiezza */
+}

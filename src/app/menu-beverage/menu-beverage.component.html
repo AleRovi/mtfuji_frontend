@@ -1,7 +1,8 @@
 @if (beverageMenu) {
 <section class="maxContainer">
     <section class="middleContainer">
-        <p class="title">ALCOLICI:</p>
+        <section class="section">
+        <p class="title">ALCOLICI</p>
         <section class="menu">
             @for (s of beverageMenu.alcoholicDrinks; track s.id){
             <li class="list">
@@ -10,7 +11,7 @@
             </li>
             }
         </section>
-        <p class="title">ANALCOLICI:</p>
+        <p class="title">ANALCOLICI</p>
         <section class="menu">
             @for (s of beverageMenu.alcoholicFree; track s.id){
             <li>
@@ -21,5 +22,6 @@
             }
         </section>
     </section>
+</section>
 </section>
 }
