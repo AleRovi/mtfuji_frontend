@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit{
      }
     
     this.userservice.saveUser(register).subscribe({
-        next : (resp) => this.router.navigate(['/booking']),
+        next : (resp) => this.router.navigate(['/login']),
         error : (err) => console.log(err)
     });
      
